@@ -102,7 +102,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Bangladesh",
-      phoneCode: "88#",
+      phoneCode: "880",
       iso2Code: "BD",
       mask: "+### ### ### ####",
     ),
@@ -126,7 +126,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Belize",
-      phoneCode: "5#1",
+      phoneCode: "501",
       iso2Code: "BZ",
       mask: "+### ### ####",
     ),
@@ -282,7 +282,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Costa Rica",
-      phoneCode: "5#6",
+      phoneCode: "506",
       iso2Code: "CR",
       mask: "+### # ### ####",
     ),
@@ -306,7 +306,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Czech Republic",
-      phoneCode: "42#",
+      phoneCode: "420",
       iso2Code: "CZ",
       mask: "+### ## ### ####",
     ),
@@ -330,7 +330,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Dominican Republic",
-      phoneCode: "18#9",
+      phoneCode: "1809",
       iso2Code: "DO",
       mask: "+#### ### ####",
     ),
@@ -342,19 +342,19 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Egypt",
-      phoneCode: "2#",
+      phoneCode: "20",
       iso2Code: "EG",
       mask: "+## ### ### ####",
     ),
     PhoneNUmberMaskCountry(
       title: "El Salvador",
-      phoneCode: "5#3",
+      phoneCode: "503",
       iso2Code: "SV",
       mask: "+### ## #### ####",
     ),
     PhoneNUmberMaskCountry(
       title: "Equatorial Guinea",
-      phoneCode: "24#",
+      phoneCode: "240",
       iso2Code: "GQ",
       mask: "+### ## ### ####",
     ),
@@ -420,7 +420,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Gambia",
-      phoneCode: "22#",
+      phoneCode: "220",
       iso2Code: "GM",
       mask: "+### ### ####",
     ),
@@ -444,13 +444,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Gibraltar",
-      phoneCode: "35#",
+      phoneCode: "350",
       iso2Code: "GI",
       mask: "+### #####",
     ),
     PhoneNUmberMaskCountry(
       title: "Greece",
-      phoneCode: "3#",
+      phoneCode: "30",
       iso2Code: "GR",
       mask: "+## # ### ####",
     ),
@@ -468,7 +468,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Guadeloupe",
-      phoneCode: "59#",
+      phoneCode: "590",
       iso2Code: "GP",
       mask: "+### ### ## ## ##",
     ),
@@ -480,7 +480,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Guatemala",
-      phoneCode: "5#2",
+      phoneCode: "502",
       iso2Code: "GT",
       mask: "+### ### ####",
     ),
@@ -504,13 +504,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Haiti",
-      phoneCode: "5#9",
+      phoneCode: "509",
       iso2Code: "HT",
       mask: "+### ### ####",
     ),
     PhoneNUmberMaskCountry(
       title: "Honduras",
-      phoneCode: "5#4",
+      phoneCode: "504",
       iso2Code: "HN",
       mask: "+### ### ####",
     ),
@@ -522,7 +522,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Hungary (Alternative)",
-      phoneCode: "#6",
+      phoneCode: "06",
       iso2Code: "HU",
       mask: "+## # ### ####",
     ),
@@ -648,7 +648,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Lithuania",
-      phoneCode: "37#",
+      phoneCode: "370",
       iso2Code: "LT",
       mask: "+### ### ####",
     ),
@@ -672,13 +672,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Malaysia",
-      phoneCode: "6#",
+      phoneCode: "60",
       iso2Code: "MY",
       mask: "+## # ### ####",
     ),
     PhoneNUmberMaskCountry(
       title: "Maldives",
-      phoneCode: "96#",
+      phoneCode: "960",
       iso2Code: "MV",
       mask: "+### ### ####",
     ),
@@ -714,7 +714,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Mauritius",
-      phoneCode: "23#",
+      phoneCode: "230",
       iso2Code: "MU",
       mask: "+### ### ####",
     ),
@@ -810,7 +810,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Nicaragua",
-      phoneCode: "5#5",
+      phoneCode: "505",
       iso2Code: "NI",
       mask: "+### #### ####",
     ),
@@ -840,7 +840,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Northern Mariana Islands",
-      phoneCode: "167#",
+      phoneCode: "1670",
       iso2Code: "MP",
       mask: "+# (###) ### ####",
     ),
@@ -864,13 +864,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Palau",
-      phoneCode: "68#",
+      phoneCode: "680",
       iso2Code: "PW",
       mask: "+### ### ####",
     ),
     PhoneNUmberMaskCountry(
       title: "Panama",
-      phoneCode: "5#7",
+      phoneCode: "507",
       iso2Code: "PA",
       mask: "+### ### ####",
     ),
@@ -924,13 +924,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Romania",
-      phoneCode: "4#",
+      phoneCode: "40",
       iso2Code: "RO",
       mask: "+## ### ### ###",
     ),
     PhoneNUmberMaskCountry(
       title: "Rwanda",
-      phoneCode: "25#",
+      phoneCode: "250",
       iso2Code: "RW",
       mask: "### ### ###",
     ),
@@ -1008,7 +1008,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "South Georgia and the South Sandwich Islands",
-      phoneCode: "5##",
+      phoneCode: "500",
       iso2Code: "GS",
       mask: "+### #####",
     ),
@@ -1074,7 +1074,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Tokelau",
-      phoneCode: "69#",
+      phoneCode: "690",
       iso2Code: "TK",
       mask: "+### ####",
     ),
@@ -1098,7 +1098,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Turkey",
-      phoneCode: "9#",
+      phoneCode: "90",
       iso2Code: "TR",
       mask: "+## ### ### ####",
     ),
@@ -1128,7 +1128,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Ukraine",
-      phoneCode: "38#",
+      phoneCode: "380",
       iso2Code: "UA",
       mask: "+### ## ### ####",
     ),
@@ -1166,7 +1166,7 @@ class PhoneNumberMaskConstant {
       title: "Wallis and Futuna",
       phoneCode: "681",
       iso2Code: "WF",
-      mask: "‎+### ## ####",
+      mask: "+### ## ####",
     ),
     PhoneNUmberMaskCountry(
       title: "Yemen",
@@ -1224,7 +1224,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Falkland Islands (Malvinas)",
-      phoneCode: "5##",
+      phoneCode: "500",
       iso2Code: "FK",
       mask: "+### #####",
     ),
@@ -1248,7 +1248,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Korea, Democratic People\"s Republic of",
-      phoneCode: "85#",
+      phoneCode: "850",
       iso2Code: "KP",
       mask: "+### # ### ####",
     ),
@@ -1302,7 +1302,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Palestina",
-      phoneCode: "97#",
+      phoneCode: "970",
       iso2Code: "PS",
       mask: "+### # ### ####",
     ),
@@ -1326,13 +1326,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Saint Barthélemy",
-      phoneCode: "59#",
+      phoneCode: "590",
       iso2Code: "BL",
       mask: "+### ### ## ## ##",
     ),
     PhoneNUmberMaskCountry(
       title: "Saint Helena, Ascension and Tristan Da Cunha",
-      phoneCode: "29#",
+      phoneCode: "290",
       iso2Code: "SH",
       mask: "+### ####",
     ),
@@ -1350,13 +1350,13 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Saint Martin",
-      phoneCode: "59#",
+      phoneCode: "590",
       iso2Code: "MF",
       mask: "+### ### ######",
     ),
     PhoneNUmberMaskCountry(
       title: "Saint Pierre and Miquelon",
-      phoneCode: "5#8",
+      phoneCode: "508",
       iso2Code: "PM",
       mask: "+5#8 ## ## ##",
     ),
@@ -1404,7 +1404,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Timor-Leste",
-      phoneCode: "67#",
+      phoneCode: "670",
       iso2Code: "TL",
       mask: "+### ### ###",
     ),
@@ -1428,7 +1428,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNUmberMaskCountry(
       title: "Virgin Islands, U.S.",
-      phoneCode: "134#",
+      phoneCode: "1340",
       iso2Code: "VI",
       mask: "+# (###) ### ####",
     ),

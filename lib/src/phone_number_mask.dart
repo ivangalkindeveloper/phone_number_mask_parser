@@ -95,7 +95,7 @@ class PhoneNumberMask {
     for (var i = potentialPhoneCode.length; i >= 0; i--) {
       String _potentialPhoneCodeSubstring = potentialPhoneCode.substring(0, i);
       // Russian phone numbers
-      if (_potentialPhoneCodeSubstring == "89") {
+      if (_potentialPhoneCodeSubstring == "79" || _potentialPhoneCodeSubstring == "89") {
         return PhoneNumberMaskConstant.countries.firstWhere((PhoneNUmberMaskCountry country) => country.iso2Code == "RU");
       }
       // print("PotentialPhoneCodeSubstring: $_potentialPhoneCodeSubstring");
@@ -136,6 +136,10 @@ class PhoneNumberMask {
     int _phoneNumberIndex = 0;
 
     for (var index = 0; index < mask.length; index++) {
+      if (_phoneNumberIndex >= phoneNumber.length) {
+        break;
+      }
+
       final String _currentMaskChar = mask[index];
       final String _currentPhoneNumberChar = phoneNumber[_phoneNumberIndex];
       // print("Index: $index");
@@ -146,9 +150,6 @@ class PhoneNumberMask {
       // print("Current result $_result");
       // print("\n");
 
-      if (_phoneNumberIndex >= phoneNumber.length) {
-        break;
-      }
       if (_currentMaskChar == "#") {
         _result.add(_currentPhoneNumberChar);
         _phoneNumberIndex++;
@@ -165,12 +166,10 @@ class PhoneNumberMask {
     }
 
     final String _resultString = _result.join("");
-
-    if (phoneNumber.length > _phoneNumberIndex && this._endlessPhoneNumber) {
-      final String _endlessPart = phoneNumber.substring(_phoneNumberIndex, phoneNumber.length);
+    if ((phoneNumber.length - 1) > _phoneNumberIndex && this._endlessPhoneNumber) {
+      final String _endlessPart = phoneNumber.substring(_phoneNumberIndex);
       return "$_resultString $_endlessPart";
     }
-
     return _resultString;
   }
 }

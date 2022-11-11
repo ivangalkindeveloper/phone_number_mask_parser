@@ -10,7 +10,7 @@ Some APIs provide phone numbers in a format without masks, while the application
 Use this field to use only one mask for all used phone numbers.
 
 **defaultMask** - a mask that will be used in case the phone number is not recognized.
-If this field is not specified, the class will use the default mask "+000 000 0000 0000".
+If this field is not specified, the class will use the default mask "+### ### #### ####".
 
 **endlessPhoneNumber** - a flag that does not truncate the last part of the phone number if it exceeds the length of the mask.
 
