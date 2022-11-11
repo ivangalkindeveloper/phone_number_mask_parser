@@ -1,5 +1,6 @@
 import 'package:phone_number_mask/src/data.dart';
 
+/// Main package constants
 class PhoneNumberMaskConstant {
   static const String defaultPhoneMask = "+### ### #### ####";
 

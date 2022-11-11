@@ -1,4 +1,5 @@
-abstract class _PhoneNumberMaskBaseModel {
+/// Common properties
+class _PhoneNumberMaskBaseModel {
   const _PhoneNumberMaskBaseModel({
     required this.phoneCode,
     required this.iso2Code,
@@ -10,6 +11,7 @@ abstract class _PhoneNumberMaskBaseModel {
   final String? mask;
 }
 
+/// Main library result class
 class PhoneNumberMaskResult extends _PhoneNumberMaskBaseModel {
   const PhoneNumberMaskResult({
     required this.phoneNumberMasked,
@@ -27,6 +29,7 @@ class PhoneNumberMaskResult extends _PhoneNumberMaskBaseModel {
   final String? countryTitle;
 }
 
+/// Country data
 class PhoneNUmberMaskCountry extends _PhoneNumberMaskBaseModel {
   const PhoneNUmberMaskCountry({
     required this.title,
