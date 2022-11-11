@@ -49,4 +49,4 @@ Additionally, the package provides a constant list of country objects for its ow
 
 ## Additional information
 For more details see example project.\
-And feel free to open an issue if you find any bugs or errors.
+And feel free to open an issue if you find any bugs or errors or suggestions.

@@ -6,3 +6,6 @@
 
 ## 1.0.2
 - Fixes for pub points.
+
+## 1.0.3
+- Update readme for pub.
