@@ -35,4 +35,4 @@ The single "apply" method does all the parsing work.
 ```
 
 ## Additional information
-For more details see example project. And feel free to open an issue if you find any bugs of errors
+For more details see example project. And feel free to open an issue if you find any bugs or errors
