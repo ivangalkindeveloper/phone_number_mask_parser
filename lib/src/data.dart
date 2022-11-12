@@ -30,10 +30,11 @@ class PhoneNumberMaskResult extends _PhoneNumberMaskBaseModel {
 }
 
 /// Country data
-class PhoneNUmberMaskCountry extends _PhoneNumberMaskBaseModel {
-  const PhoneNUmberMaskCountry({
+class PhoneNumberMaskCountry extends _PhoneNumberMaskBaseModel {
+  const PhoneNumberMaskCountry({
     required this.title,
     required String phoneCode,
+    required this.alternativePhoneCodes,
     required String iso2Code,
     required String mask,
   }) : super(
@@ -43,4 +44,5 @@ class PhoneNUmberMaskCountry extends _PhoneNumberMaskBaseModel {
         );
 
   final String title;
+  final List<String> alternativePhoneCodes;
 }

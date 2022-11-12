@@ -11,6 +11,7 @@ void main() {
   print(_result0.iso2Code);
   print(_result0.mask);
   print("\n");
+
   const String _phone1 = "168491012345120455";
   final PhoneNumberMaskResult _result1 = _phoneNumberMask0.apply(phoneNumber: _phone1);
   print(_phone1);
@@ -20,6 +21,7 @@ void main() {
   print(_result1.iso2Code);
   print(_result1.mask);
   print("\n");
+
   const String _phone2 = "898491012345120455";
   final PhoneNumberMaskResult _result2 = _phoneNumberMask0.apply(phoneNumber: _phone2);
   print(_phone2);
@@ -29,6 +31,7 @@ void main() {
   print(_result2.iso2Code);
   print(_result2.mask);
   print("\n");
+
   const String _phone3 = "798491012345120455";
   final PhoneNumberMaskResult _result3 = _phoneNumberMask0.apply(phoneNumber: _phone3);
   print(_phone3);
@@ -38,6 +41,7 @@ void main() {
   print(_result3.iso2Code);
   print(_result3.mask);
   print("\n");
+
   const String _phone4 = "778491012345120455";
   final PhoneNumberMaskResult _result4 = _phoneNumberMask0.apply(phoneNumber: _phone4);
   print(_phone4);
@@ -58,6 +62,7 @@ void main() {
   print(_result5.iso2Code);
   print(_result5.mask);
   print("\n");
+
   const String _phone6 = "672235859394";
   final PhoneNumberMaskResult _result6 = _phoneNumberMask1.apply(phoneNumber: _phone6);
   print(_phone6);
@@ -91,7 +96,7 @@ void main() {
   print("\n");
 
   const String _phone9 = "1492330323912034";
-  final PhoneNumberMask _phoneNumberMask4 = PhoneNumberMask(endlessPhoneNumber: true);
+  final PhoneNumberMask _phoneNumberMask4 = PhoneNumberMask(isEndlessPhoneNumber: true);
   final PhoneNumberMaskResult _result9 = _phoneNumberMask4.apply(phoneNumber: _phone9);
   print(_phone9);
   print(_result9.phoneNumberMasked);
@@ -102,7 +107,7 @@ void main() {
   print("\n");
 
   const String _phone10 = "3702033002300440403";
-  final PhoneNumberMask _phoneNumberMask5 = PhoneNumberMask(endlessPhoneNumber: false);
+  final PhoneNumberMask _phoneNumberMask5 = PhoneNumberMask(isEndlessPhoneNumber: false);
   final PhoneNumberMaskResult _result10 = _phoneNumberMask5.apply(phoneNumber: _phone10);
   print(_phone10);
   print(_result10.phoneNumberMasked);
