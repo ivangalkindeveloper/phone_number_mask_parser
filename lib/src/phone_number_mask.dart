@@ -5,6 +5,8 @@ import 'package:collection/collection.dart';
 import 'dart:developer' as developer;
 import 'dart:math' as math;
 
+// dart format lib/src/phone_number_mask.dart
+
 /// Main package class
 class PhoneNumberMask {
   /// [targetMask] The mask that will be used to bypass phone number parsing to overlay all phone numbers.\
@@ -37,7 +39,8 @@ class PhoneNumberMask {
 
   /// The main method for applying the mask
   PhoneNumberMaskResult apply({required String phoneNumber}) {
-    final String _phoneNumberSanitized = phoneNumber.replaceAll(RegExp(r'[^0-9]'), "");
+    final String _phoneNumberSanitized =
+        phoneNumber.replaceAll(RegExp(r'[^0-9]'), "");
 
     try {
       if (_phoneNumberSanitized.isEmpty) {
@@ -56,17 +59,21 @@ class PhoneNumberMask {
 
       // Main process
       // 1) Get potential phone code
-      final String _potentialPhoneCode = this._getPotentialPhoneCode(phoneNumberSanitized: _phoneNumberSanitized);
+      final String _potentialPhoneCode = this
+          ._getPotentialPhoneCode(phoneNumberSanitized: _phoneNumberSanitized);
 
       // 2) Parse country from potential phone code
-      final PhoneNumberMaskCountry _phoneNumberCountry = this._parseCountry(potentialPhoneCode: _potentialPhoneCode);
+      final PhoneNumberMaskCountry _phoneNumberCountry =
+          this._parseCountry(potentialPhoneCode: _potentialPhoneCode);
 
       // 3) Actual phone code
-      String _phoneNumberResult =
-          this._replaceOnActualPhoneCode(phoneCode: _phoneNumberCountry.phoneCode, phoneNumberSanitized: _phoneNumberSanitized);
+      String _phoneNumberResult = this._replaceOnActualPhoneCode(
+          phoneCode: _phoneNumberCountry.phoneCode,
+          phoneNumberSanitized: _phoneNumberSanitized);
 
       // 4) Mask
-      _phoneNumberResult = this._applyMask(mask: _phoneNumberCountry.mask!, phoneNumber: _phoneNumberResult);
+      _phoneNumberResult = this._applyMask(
+          mask: _phoneNumberCountry.mask!, phoneNumber: _phoneNumberResult);
 
       // 5) Plus
       if (this._isPlus == false) {
@@ -106,8 +113,10 @@ class PhoneNumberMask {
 
   /// Getting potential phone code from sanitized phone number
   String _getPotentialPhoneCode({required String phoneNumberSanitized}) {
-    final int _potentialPhoneCodeLength = math.min(phoneNumberSanitized.length, 4);
-    final String _potentialPhoneCode = phoneNumberSanitized.substring(0, _potentialPhoneCodeLength);
+    final int _potentialPhoneCodeLength =
+        math.min(phoneNumberSanitized.length, 4);
+    final String _potentialPhoneCode =
+        phoneNumberSanitized.substring(0, _potentialPhoneCodeLength);
     // print("PotentialPhoneCode: $_potentialPhoneCode");
     return _potentialPhoneCode;
   }
@@ -117,8 +126,11 @@ class PhoneNumberMask {
     for (var i = potentialPhoneCode.length; i >= 0; i--) {
       String _potentialPhoneCodeSubstring = potentialPhoneCode.substring(0, i);
       // print("PotentialPhoneCodeSubstring: $_potentialPhoneCodeSubstring");
-      final PhoneNumberMaskCountry? _country = PhoneNumberMaskConstant.countries.firstWhereOrNull((PhoneNumberMaskCountry country) =>
-          country.alternativePhoneCodes.contains(_potentialPhoneCodeSubstring) || country.phoneCode == _potentialPhoneCodeSubstring);
+      final PhoneNumberMaskCountry? _country = PhoneNumberMaskConstant.countries
+          .firstWhereOrNull((PhoneNumberMaskCountry country) =>
+              country.alternativePhoneCodes
+                  .contains(_potentialPhoneCodeSubstring) ||
+              country.phoneCode == _potentialPhoneCodeSubstring);
       if (_country?.mask == null) {
         continue;
       }
@@ -131,12 +143,14 @@ class PhoneNumberMask {
   }
 
   /// Replacement on finding phone code for crutching numbers
-  String _replaceOnActualPhoneCode({required String? phoneCode, required String phoneNumberSanitized}) {
+  String _replaceOnActualPhoneCode(
+      {required String? phoneCode, required String phoneNumberSanitized}) {
     if (phoneCode == null) {
       return phoneNumberSanitized;
     }
 
-    final List<String> _phoneNumberSanitizedList = phoneNumberSanitized.split("");
+    final List<String> _phoneNumberSanitizedList =
+        phoneNumberSanitized.split("");
 
     for (var index = 0; index < phoneCode.length; index++) {
       _phoneNumberSanitizedList[index] = phoneCode[index];
@@ -181,7 +195,8 @@ class PhoneNumberMask {
 
     final String _resultString = _result.join("");
 
-    if ((phoneNumber.length - 1) > _phoneNumberIndex && this._isEndlessPhoneNumber) {
+    if ((phoneNumber.length - 1) > _phoneNumberIndex &&
+        this._isEndlessPhoneNumber) {
       final String _endlessPart = phoneNumber.substring(_phoneNumberIndex);
       return "$_resultString $_endlessPart";
     }

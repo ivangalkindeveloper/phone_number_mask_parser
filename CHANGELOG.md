@@ -14,3 +14,6 @@
 - Fixes for alternative phone codes;
 - Adding "plus" property;
 - Fix comments description;
+
+## 1.0.5
+- Fixes for dart format and readme;
