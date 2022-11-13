@@ -8,6 +8,7 @@ Some server APIs provide unformatted phone numbers, while the application client
 ## Usage
 ### Main class
 The package has the only main class to use - [PhoneNumberMask](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L8):
+
 | Data type | Name | Description | Default value |
 |-----------|------|-------------|---------------|
 | **String?** | **targetMask** | The mask that will be used to bypass phone number parsing to overlay all phone numbers. Use this field to use only one mask for all phone numbers. | **null** |
@@ -27,6 +28,7 @@ final PhoneNumberMask _phoneNumberMask = PhoneNumberMask(
 ### Main method and result
 The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L32) does all the parsing work.\
 The result is a separate class [PhoneNumberMaskResult](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/data.dart#L15) that provides the following fields:
+
 | Data type | Name | Description |
 |-----------|------|-------------|
 | **String** | **phoneNumberMasked** | Formatted phone number. |
