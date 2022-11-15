@@ -8,7 +8,7 @@ class PhoneNumberMaskConstant {
       phoneCode: "93",
       alternativePhoneCodes: [],
       iso2Code: "AF",
-      mask: "+## ### ### ####",
+      mask: "+## ## ### ####",
     ),
     PhoneNumberMaskCountry(
       title: "Albania",
@@ -25,9 +25,18 @@ class PhoneNumberMaskConstant {
       mask: "+### # ### ####",
     ),
     PhoneNumberMaskCountry(
-      title: "American Samoa",
-      phoneCode: "1684",
+      title: "United States",
+      phoneCode: "1",
       alternativePhoneCodes: [],
+      iso2Code: "US",
+      mask: "+# (###) ### ####",
+    ),
+    PhoneNumberMaskCountry(
+      title: "American Samoa",
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1684",
+      ],
       iso2Code: "AS",
       mask: "+# (###) ### ####",
     ),
@@ -47,15 +56,19 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Anguilla",
-      phoneCode: "1264",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1264",
+      ],
       iso2Code: "AI",
       mask: "+# (###) ### ####",
     ),
     PhoneNumberMaskCountry(
       title: "Antigua and Barbuda",
-      phoneCode: "1268",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1268",
+      ],
       iso2Code: "AG",
       mask: "+# (###) ### ####",
     ),
@@ -103,8 +116,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Bahamas",
-      phoneCode: "1242",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1242",
+      ],
       iso2Code: "BS",
       mask: "+# (###) ### ####",
     ),
@@ -124,8 +139,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Barbados",
-      phoneCode: "1246",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1246",
+      ],
       iso2Code: "BB",
       mask: "+# (###) ### ####",
     ),
@@ -159,8 +176,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Bermuda",
-      phoneCode: "1441",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1441",
+      ],
       iso2Code: "BM",
       mask: "+# (###) ### ####",
     ),
@@ -235,16 +254,20 @@ class PhoneNumberMaskConstant {
       mask: "+### # ### ####",
     ),
     PhoneNumberMaskCountry(
-      title: "United States",
-      phoneCode: "1",
-      alternativePhoneCodes: [],
-      iso2Code: "US",
-      mask: "+# (###) ### ####",
-    ),
-    PhoneNumberMaskCountry(
       title: "Canada",
       phoneCode: "1",
-      alternativePhoneCodes: [],
+      alternativePhoneCodes: [
+        "1204",
+        "1236",
+        "1226",
+        "1306",
+        "1367",
+        "1403",
+        "1506",
+        "1709",
+        "1782",
+        "1867",
+      ],
       iso2Code: "CA",
       mask: "+# (###) ### ####",
     ),
@@ -257,8 +280,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Cayman Islands",
-      phoneCode: "345",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1345",
+      ],
       iso2Code: "KY",
       mask: "+# (###) ### ####",
     ),
@@ -323,7 +348,7 @@ class PhoneNumberMaskConstant {
       phoneCode: "682",
       alternativePhoneCodes: [],
       iso2Code: "CK",
-      mask: "+682 ## ###",
+      mask: "+### ## ###",
     ),
     PhoneNumberMaskCountry(
       title: "Costa Rica",
@@ -477,7 +502,7 @@ class PhoneNumberMaskConstant {
       phoneCode: "689",
       alternativePhoneCodes: [],
       iso2Code: "PF",
-      mask: "+### ######",
+      mask: "+### ## ## ## ##",
     ),
     PhoneNumberMaskCountry(
       title: "Gabon",
@@ -537,8 +562,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Grenada",
-      phoneCode: "1473",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1473",
+      ],
       iso2Code: "GD",
       mask: "+# (###) ### ####",
     ),
@@ -551,8 +578,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Guam",
-      phoneCode: "1671",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1671",
+      ],
       iso2Code: "GU",
       mask: "+# (###) ### ####",
     ),
@@ -663,8 +692,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Jamaica",
-      phoneCode: "1876",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1876",
+      ],
       iso2Code: "JM",
       mask: "+# (###) ### ####",
     ),
@@ -686,7 +717,9 @@ class PhoneNumberMaskConstant {
       title: "Kazakhstan",
       phoneCode: "7",
       alternativePhoneCodes: [
+        "87",
         "77",
+        "76",
       ],
       iso2Code: "KZ",
       mask: "+# (###) ### ####",
@@ -841,7 +874,10 @@ class PhoneNumberMaskConstant {
     PhoneNumberMaskCountry(
       title: "Mayotte",
       phoneCode: "262",
-      alternativePhoneCodes: [],
+      alternativePhoneCodes: [
+        "262269",
+        "262639",
+      ],
       iso2Code: "YT",
       mask: "+### ### ## ## ##",
     ),
@@ -875,8 +911,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Montserrat",
-      phoneCode: "1664",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1664",
+      ],
       iso2Code: "MS",
       mask: "+# (###) ### ####",
     ),
@@ -980,8 +1018,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Northern Mariana Islands",
-      phoneCode: "1670",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1670",
+      ],
       iso2Code: "MP",
       mask: "+# (###) ### ####",
     ),
@@ -1175,13 +1215,6 @@ class PhoneNumberMaskConstant {
       mask: "+## ## ### ####",
     ),
     PhoneNumberMaskCountry(
-      title: "South Georgia and the South Sandwich Islands",
-      phoneCode: "500",
-      alternativePhoneCodes: [],
-      iso2Code: "GS",
-      mask: "+### #####",
-    ),
-    PhoneNumberMaskCountry(
       title: "Spain",
       phoneCode: "34",
       alternativePhoneCodes: [],
@@ -1267,8 +1300,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Trinidad and Tobago",
-      phoneCode: "1868",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1868",
+      ],
       iso2Code: "TT",
       mask: "+# (###) ### ####",
     ),
@@ -1295,8 +1330,10 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Turks and Caicos Islands",
-      phoneCode: "1649",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1649",
+      ],
       iso2Code: "TC",
       mask: "+# (###) ### ####",
     ),
@@ -1331,7 +1368,9 @@ class PhoneNumberMaskConstant {
     PhoneNumberMaskCountry(
       title: "United Kingdom",
       phoneCode: "44",
-      alternativePhoneCodes: [],
+      alternativePhoneCodes: [
+        "447",
+      ],
       iso2Code: "GB",
       mask: "+## #### ######",
     ),
@@ -1385,13 +1424,6 @@ class PhoneNumberMaskConstant {
       mask: "+### ## ### ####",
     ),
     PhoneNumberMaskCountry(
-      title: "Land Islands",
-      phoneCode: "354",
-      alternativePhoneCodes: [],
-      iso2Code: "AX",
-      mask: "+### ### ####",
-    ),
-    PhoneNumberMaskCountry(
       title: "Bolivia, Plurinational State of",
       phoneCode: "591",
       alternativePhoneCodes: [],
@@ -1404,13 +1436,6 @@ class PhoneNumberMaskConstant {
       alternativePhoneCodes: [],
       iso2Code: "BN",
       mask: "+### ### ####",
-    ),
-    PhoneNumberMaskCountry(
-      title: "Cocos (Keeling) Islands",
-      phoneCode: "61",
-      alternativePhoneCodes: [],
-      iso2Code: "CC",
-      mask: "+## # #### ####",
     ),
     PhoneNumberMaskCountry(
       title: "Congo, The Democratic Republic of the",
@@ -1436,7 +1461,13 @@ class PhoneNumberMaskConstant {
     PhoneNumberMaskCountry(
       title: "Guernsey",
       phoneCode: "44",
-      alternativePhoneCodes: [],
+      alternativePhoneCodes: [
+        "441534",
+        "447700",
+        "447797",
+        "447829",
+        "447937",
+      ],
       iso2Code: "GG",
       mask: "+## (#) #### ######",
     ),
@@ -1525,16 +1556,15 @@ class PhoneNumberMaskConstant {
       mask: "+### # ### ####",
     ),
     PhoneNumberMaskCountry(
-      title: "Pitcairn",
-      phoneCode: "64",
-      alternativePhoneCodes: [],
-      iso2Code: "PN",
-      mask: "+## # ### ####",
-    ),
-    PhoneNumberMaskCountry(
-      title: "Réunion",
+      title: "Réunion Island",
       phoneCode: "262",
-      alternativePhoneCodes: [],
+      alternativePhoneCodes: [
+        "262262",
+        "262263",
+        "262692",
+        "262693",
+        "262976",
+      ],
       iso2Code: "RE",
       mask: "+### ### ## ## ##",
     ),
@@ -1543,6 +1573,9 @@ class PhoneNumberMaskConstant {
       phoneCode: "7",
       alternativePhoneCodes: [
         "89",
+        "88",
+        "83",
+        "84",
         "79",
       ],
       iso2Code: "RU",
@@ -1564,15 +1597,19 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Saint Kitts and Nevis",
-      phoneCode: "1869",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1869",
+      ],
       iso2Code: "KN",
       mask: "+# (###) ### ####",
     ),
     PhoneNumberMaskCountry(
       title: "Saint Lucia",
-      phoneCode: "1758",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1758",
+      ],
       iso2Code: "LC",
       mask: "+# (###) ### ####",
     ),
@@ -1588,12 +1625,14 @@ class PhoneNumberMaskConstant {
       phoneCode: "508",
       alternativePhoneCodes: [],
       iso2Code: "PM",
-      mask: "+5#8 ## ## ##",
+      mask: "+### ## ## ##",
     ),
     PhoneNumberMaskCountry(
       title: "Saint Vincent and the Grenadines",
-      phoneCode: "1784",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1784",
+      ],
       iso2Code: "VC",
       mask: "+# (###) ### ####",
     ),
@@ -1610,13 +1649,6 @@ class PhoneNumberMaskConstant {
       alternativePhoneCodes: [],
       iso2Code: "SO",
       mask: "+### ## ### ###",
-    ),
-    PhoneNumberMaskCountry(
-      title: "Svalbard and Jan Mayen",
-      phoneCode: "47",
-      alternativePhoneCodes: [],
-      iso2Code: "SJ",
-      mask: "+## #### ####",
     ),
     PhoneNumberMaskCountry(
       title: "Syrian Arab Republic",
@@ -1662,15 +1694,19 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Virgin Islands, British",
-      phoneCode: "1284",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1284",
+      ],
       iso2Code: "VG",
       mask: "+# (###) ### ####",
     ),
     PhoneNumberMaskCountry(
       title: "Virgin Islands, U.S.",
-      phoneCode: "1340",
-      alternativePhoneCodes: [],
+      phoneCode: "1",
+      alternativePhoneCodes: [
+        "1340",
+      ],
       iso2Code: "VI",
       mask: "+# (###) ### ####",
     ),

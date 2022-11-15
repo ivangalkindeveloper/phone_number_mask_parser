@@ -17,7 +17,7 @@ void main() {
     final PhoneNumberMaskResult _result1 = _phoneNumberMask.apply(phoneNumber: _phone1);
     expect(_result1.phoneNumberMasked, "+1 (684) 910 1234");
     expect(_result1.countryTitle, "American Samoa");
-    expect(_result1.phoneCode, "1684");
+    expect(_result1.phoneCode, "1");
     expect(_result1.iso2Code, "AS");
     expect(_result1.mask, "+# (###) ### ####");
 
@@ -115,11 +115,11 @@ void main() {
 
     const String _phone11 = "34566";
     final PhoneNumberMaskResult _result11 = _phoneNumberMask.apply(phoneNumber: _phone11);
-    expect(_result11.phoneNumberMasked, "+3 (456) 6");
-    expect(_result11.countryTitle, "Cayman Islands");
-    expect(_result11.phoneCode, "345");
-    expect(_result11.iso2Code, "KY");
-    expect(_result11.mask, "+# (###) ### ####");
+    expect(_result11.phoneNumberMasked, "+34 566");
+    expect(_result11.countryTitle, "Spain");
+    expect(_result11.phoneCode, "34");
+    expect(_result11.iso2Code, "ES");
+    expect(_result11.mask, "+## ### ### ###");
   });
 
   test("Checking dirty number", () {

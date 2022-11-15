@@ -1,13 +1,15 @@
 # Phone number mask
-The package provides a simple parsing of phone numbers and various masking options.\
+☎️ The package provides a simple parsing of phone numbers and various masking options.\
 The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
+
 
 ## Motivation
 Some server APIs provide unformatted phone numbers, while the application client must figure out what mask to apply to a given phone number and use it for display.
 
+
 ## Usage
 ### Main class
-The package has the only main class to use - [PhoneNumberMask](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L8):
+The package has the only main class to use - [PhoneNumberMask](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L11):
 
 | Data type | Name | Description | Default value |
 |-----------|------|-------------|---------------|
@@ -25,8 +27,20 @@ final PhoneNumberMask _phoneNumberMask = PhoneNumberMask(
 );
 ```
 
-### Main method and result
-The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L32) does all the parsing work.\
+### Main method and example
+The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L41) does all the parsing work.
+
+```dart
+  final PhoneNumberMask _phoneNumberMask = PhoneNumberMask();
+  final PhoneNumberMaskResult _result = _phoneNumberMask.apply(phoneNumber: "4492330323912034");
+  print(_result.phoneNumberMasked); // +44 9233 032391
+  print(_result.countryTitle); // United Kingdom
+  print(_result.phoneCode); // 44
+  print(_result.iso2Code); // GB
+  print(_result.mask); // +## #### ######
+```
+
+### Result
 The result is a separate class [PhoneNumberMaskResult](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/data.dart#L15) that provides the following fields:
 
 | Data type | Name | Description |
@@ -37,16 +51,6 @@ The result is a separate class [PhoneNumberMaskResult](https://github.com/ivanga
 | **String?** | **iso2Code** | Country code according to ISO 3166 standard. |
 | **String?** | **mask** | The mask of this number in its pure form. |
 
-### Example:
-```dart
-  final PhoneNumberMask _phoneNumberMask = PhoneNumberMask();
-  final PhoneNumberMaskResult _result = _phoneNumberMask.apply(phoneNumber: "4492330323912034");
-  print(_result.phoneNumberMasked); // +44 9233 032391
-  print(_result.countryTitle); // United Kingdom
-  print(_result.phoneCode); // 44
-  print(_result.iso2Code); // GB
-  print(_result.mask); // +## #### ######
-```
 
 ## Additional objects
 Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMask.countries](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/constant.dart#L4).

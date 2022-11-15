@@ -20,3 +20,6 @@
 
 ## 1.0.6
 - Fixes for readme;
+
+## 1.0.7
+- Fixes countries, masks and code phones list for better parsing;
