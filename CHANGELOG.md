@@ -23,3 +23,6 @@
 
 ## 1.0.7
 - Fixes countries, masks and code phones list for better parsing;
+
+## 1.0.8
+- Fixes for pub versions;
