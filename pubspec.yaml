@@ -1,14 +1,11 @@
 name: phone_number_mask
 description: ☎️ Dart package of simple parsing of phone numbers and various masking options.
-version: 1.0.8
+version: 1.0.9
 repository: https://github.com/ivangalkindeveloper/phone_number_mask
 # homepage: https://www.example.com
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
-
-dependencies:
-  collection: ^1.17.0
 
 dev_dependencies:
   test:

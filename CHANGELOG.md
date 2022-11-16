@@ -26,3 +26,6 @@
 
 ## 1.0.8
 - Fixes for pub versions;
+
+## 1.0.9
+- Fixes for constant phone codes and pub versions;

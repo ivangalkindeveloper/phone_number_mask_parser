@@ -6,8 +6,8 @@ class _PhoneNumberMaskBaseModel {
     required this.mask,
   });
 
-  final String? phoneCode;
   final String? iso2Code;
+  final String? phoneCode;
   final String? mask;
 }
 
@@ -16,8 +16,8 @@ class PhoneNumberMaskResult extends _PhoneNumberMaskBaseModel {
   const PhoneNumberMaskResult({
     required this.phoneNumberMasked,
     this.countryTitle,
-    String? phoneCode,
     String? iso2Code,
+    String? phoneCode,
     String? mask,
   }) : super(
           phoneCode: phoneCode,
@@ -33,13 +33,13 @@ class PhoneNumberMaskResult extends _PhoneNumberMaskBaseModel {
 class PhoneNumberMaskCountry extends _PhoneNumberMaskBaseModel {
   const PhoneNumberMaskCountry({
     required this.title,
+    required String iso2Code,
     required String phoneCode,
     required this.alternativePhoneCodes,
-    required String iso2Code,
     required String mask,
   }) : super(
-          phoneCode: phoneCode,
           iso2Code: iso2Code,
+          phoneCode: phoneCode,
           mask: mask,
         );
 
