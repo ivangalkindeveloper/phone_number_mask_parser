@@ -38,7 +38,7 @@ class PhoneNumberMask {
 
   /// The main method for applying the mask
   PhoneNumberMaskResult apply({required String phoneNumber}) {
-    final String _phoneNumberSanitized = phoneNumber.replaceAll(RegExp(r'[^0-9]'), "");
+    final String _phoneNumberSanitized = this.sanitize(string: phoneNumber);
 
     try {
       if (_phoneNumberSanitized.isEmpty) {
@@ -57,17 +57,21 @@ class PhoneNumberMask {
 
       // Main process
       // 1) Get potential phone code
-      final String _potentialPhoneCode = this._getPotentialPhoneCode(phoneNumberSanitized: _phoneNumberSanitized);
+      final String _potentialPhoneCode = this
+          ._getPotentialPhoneCode(phoneNumberSanitized: _phoneNumberSanitized);
 
       // 2) Parse country from potential phone code
-      final PhoneNumberMaskCountry _phoneNumberCountry = this._parseCountry(potentialPhoneCode: _potentialPhoneCode);
+      final PhoneNumberMaskCountry _phoneNumberCountry =
+          this._parseCountry(potentialPhoneCode: _potentialPhoneCode);
 
       // 3) Actual phone code
-      String _phoneNumberResult =
-          this._replaceOnActualPhoneCode(phoneCode: _phoneNumberCountry.phoneCode, phoneNumberSanitized: _phoneNumberSanitized);
+      String _phoneNumberResult = this._replaceOnActualPhoneCode(
+          phoneCode: _phoneNumberCountry.phoneCode,
+          phoneNumberSanitized: _phoneNumberSanitized);
 
       // 4) Mask
-      _phoneNumberResult = this._applyMask(mask: _phoneNumberCountry.mask!, phoneNumber: _phoneNumberResult);
+      _phoneNumberResult = this._applyMask(
+          mask: _phoneNumberCountry.mask!, phoneNumber: _phoneNumberResult);
 
       // 5) Plus
       if (this._isPlus == false) {
@@ -105,10 +109,32 @@ class PhoneNumberMask {
     }
   }
 
-  /// Getting potential phone code from sanitized phone number
+  /// Sanitize string for numbers
+  String sanitize({required String string}) =>
+      string.replaceAll(RegExp(r'[^0-9]'), "");
+
+  /// Getting potential phone code from sanitized phone number and sanitized phone codes from constant
   String _getPotentialPhoneCode({required String phoneNumberSanitized}) {
-    final int _potentialPhoneCodeLength = math.min(phoneNumberSanitized.length, 4);
-    final String _potentialPhoneCode = phoneNumberSanitized.substring(0, _potentialPhoneCodeLength);
+    int _maxPhoneCode = 0;
+
+    PhoneNumberMaskConstant.countries.forEach((PhoneNumberMaskCountry country) {
+      [
+        country.title,
+        ...country.alternativePhoneCodes,
+      ]
+          .map((String phoneCode) => this.sanitize(string: phoneCode))
+          .toList()
+          .forEach((String phoneCode) {
+        if (phoneCode.length > _maxPhoneCode) {
+          _maxPhoneCode = phoneCode.length;
+        }
+      });
+    });
+
+    final int _potentialPhoneCodeLength =
+        math.min(phoneNumberSanitized.length, _maxPhoneCode);
+    final String _potentialPhoneCode =
+        phoneNumberSanitized.substring(0, _potentialPhoneCodeLength);
     // print("PotentialPhoneCode: $_potentialPhoneCode");
     return _potentialPhoneCode;
   }
@@ -116,11 +142,16 @@ class PhoneNumberMask {
   /// Finding country data from potential phone code
   PhoneNumberMaskCountry _parseCountry({required String potentialPhoneCode}) {
     for (var i = potentialPhoneCode.length; i >= 0; i--) {
-      String _potentialPhoneCodeSubstring = "+${potentialPhoneCode.substring(0, i)}";
+      String _potentialPhoneCodeSubstring =
+          "+${potentialPhoneCode.substring(0, i)}";
       // print("PotentialPhoneCodeSubstring: $_potentialPhoneCodeSubstring");
       try {
-        final PhoneNumberMaskCountry? _country = PhoneNumberMaskConstant.countries.firstWhere((PhoneNumberMaskCountry country) =>
-            country.alternativePhoneCodes.contains(_potentialPhoneCodeSubstring) || country.phoneCode == _potentialPhoneCodeSubstring);
+        final PhoneNumberMaskCountry? _country = PhoneNumberMaskConstant
+            .countries
+            .firstWhere((PhoneNumberMaskCountry country) =>
+                country.alternativePhoneCodes
+                    .contains(_potentialPhoneCodeSubstring) ||
+                country.phoneCode == _potentialPhoneCodeSubstring);
         return _country!;
       } catch (error) {
         continue;
@@ -133,13 +164,15 @@ class PhoneNumberMask {
   }
 
   /// Replacement on finding phone code for crutching numbers
-  String _replaceOnActualPhoneCode({required String? phoneCode, required String phoneNumberSanitized}) {
+  String _replaceOnActualPhoneCode(
+      {required String? phoneCode, required String phoneNumberSanitized}) {
     if (phoneCode == null) {
       return phoneNumberSanitized;
     }
 
-    final String _phoneCodeSaitized = phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
-    final List<String> _phoneNumberSanitizedList = phoneNumberSanitized.split("");
+    final String _phoneCodeSaitized = this.sanitize(string: phoneCode);
+    final List<String> _phoneNumberSanitizedList =
+        phoneNumberSanitized.split("");
 
     for (var index = 0; index < _phoneCodeSaitized.length; index++) {
       _phoneNumberSanitizedList[index] = _phoneCodeSaitized[index];
@@ -184,7 +217,8 @@ class PhoneNumberMask {
 
     final String _resultString = _result.join("");
 
-    if ((phoneNumber.length - 1) > _phoneNumberIndex && this._isEndlessPhoneNumber) {
+    if ((phoneNumber.length - 1) > _phoneNumberIndex &&
+        this._isEndlessPhoneNumber) {
       final String _endlessPart = phoneNumber.substring(_phoneNumberIndex);
       return "$_resultString $_endlessPart";
     }

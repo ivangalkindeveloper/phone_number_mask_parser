@@ -6,6 +6,10 @@ The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
 ## Motivation
 Some server APIs provide unformatted phone numbers, while the application client must figure out what mask to apply to a given phone number and use it for display.
 
+## Benefits
+Some packages only provide the ability to either parse phone numbers, without the ability to apply a custom mask, or are formatters for fields from which logic cannot be extracted for use on non-field strings.\
+This package can use for self phone field formatters.\
+In the list of constant countries, such data is collected to ensure the maximum match for parsing phone numbers.
 
 ## Usage
 ### Main class
@@ -58,4 +62,4 @@ Additionally, the package provides a constant list of country objects for its ow
 
 ## Additional information
 For more details see example project.\
-And feel free to open an issue if you find any bugs or errors or suggestions.
+And feel free to open an issue if you find any bugs or errors or suggestions for adding to phone number parsing or phone countries data.

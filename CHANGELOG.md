@@ -29,3 +29,6 @@
 
 ## 1.0.9
 - Fixes for constant phone codes and pub versions;
+
+## 1.1.0
+- New method for maximum length of constant phoe codes and formats;
