@@ -33,9 +33,11 @@ class PhoneNumberMask {
     final String phoneNumberSanitized = this.sanitize(string: phoneNumber);
 
     try {
-      if (phoneNumberSanitized.isEmpty) throw const PhoneNumberEmptyExpection();
+      if (phoneNumberSanitized.isEmpty) {
+        throw const PhoneNumberEmptyExpection();
+      }
 
-      if (this.targetMask != null)
+      if (this.targetMask != null) {
         return PhoneNumberMaskResult(
           phoneNumberMasked: this._applyMask(
             mask: this.targetMask!,
@@ -43,6 +45,7 @@ class PhoneNumberMask {
           ),
           iso2Code: null,
         );
+      }
 
       // Main process
       // 1) Get potential phone code
@@ -131,6 +134,7 @@ class PhoneNumberMask {
       phoneNumberSanitized.length,
       maxPhoneCode,
     );
+
     final String potentialPhoneCode = phoneNumberSanitized.substring(
       0,
       potentialPhoneCodeLength,
@@ -143,11 +147,14 @@ class PhoneNumberMask {
     required String potentialPhoneCode,
   }) {
     for (var i = potentialPhoneCode.length; i >= 0; i--) {
-      String potentialPhoneCodeSubstring = "+${potentialPhoneCode.substring(0, i)}";
+      String potentialPhoneCodeSubstring =
+          "+${potentialPhoneCode.substring(0, i)}";
       try {
-        final PhoneNumberMaskCountry? _country = PhoneNumberMaskConstant.countries
+        final PhoneNumberMaskCountry? _country = PhoneNumberMaskConstant
+            .countries
             .firstWhere((PhoneNumberMaskCountry country) =>
-                country.alternativePhoneCodes.contains(potentialPhoneCodeSubstring) ||
+                country.alternativePhoneCodes
+                    .contains(potentialPhoneCodeSubstring) ||
                 country.phoneCode == potentialPhoneCodeSubstring);
         return _country!;
       } catch (error) {
@@ -165,14 +172,18 @@ class PhoneNumberMask {
     required String? phoneCode,
     required String phoneNumberSanitized,
   }) {
-    if (phoneCode == null) return phoneNumberSanitized;
+    if (phoneCode == null) {
+      return phoneNumberSanitized;
+    }
 
     final String phoneCodeSaitized = this.sanitize(string: phoneCode);
-    final List<String> phoneNumberSanitizedList = phoneNumberSanitized.split("");
+    final List<String> phoneNumberSanitizedList =
+        phoneNumberSanitized.split("");
 
     for (var index = 0; index < phoneCodeSaitized.length; index++) {
       phoneNumberSanitizedList[index] = phoneCodeSaitized[index];
     }
+
     return phoneNumberSanitizedList.join("");
   }
 
@@ -206,7 +217,8 @@ class PhoneNumberMask {
 
     final String resultString = result.join("");
 
-    if ((phoneNumber.length - 1) > phoneNumberIndex && this.isEndlessPhoneNumber) {
+    if ((phoneNumber.length - 1) > phoneNumberIndex &&
+        this.isEndlessPhoneNumber) {
       final String endlessPart = phoneNumber.substring(phoneNumberIndex);
       return "$resultString $endlessPart";
     }

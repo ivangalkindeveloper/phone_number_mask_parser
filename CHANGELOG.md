@@ -1,3 +1,6 @@
+## 2.0.1
+* Pub fixes;
+
 ## 2.0.0
 * Refactoring classes and adding new countries;
 
