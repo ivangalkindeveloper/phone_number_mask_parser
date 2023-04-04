@@ -1,4 +1,4 @@
-import 'package:phone_number_mask/src/data.dart';
+import 'package:phone_number_mask/phone_number_mask.dart';
 
 /// Main package constants
 class PhoneNumberMaskConstant {
@@ -621,6 +621,15 @@ class PhoneNumberMaskConstant {
       mask: "+### ### ####",
     ),
     PhoneNumberMaskCountry(
+      title: "Holy See (Vatican City State)",
+      phoneCode: "+379",
+      alternativePhoneCodes: [
+        "+39",
+      ],
+      iso2Code: "VA",
+      mask: "+### #### #######",
+    ),
+    PhoneNumberMaskCountry(
       title: "Honduras",
       phoneCode: "+504",
       alternativePhoneCodes: [],
@@ -1215,6 +1224,13 @@ class PhoneNumberMaskConstant {
       mask: "+## ## ### ####",
     ),
     PhoneNumberMaskCountry(
+      title: "South Sudan",
+      phoneCode: "+211",
+      alternativePhoneCodes: [],
+      iso2Code: "SS",
+      mask: "+### #### #####",
+    ),
+    PhoneNumberMaskCountry(
       title: "Spain",
       phoneCode: "+34",
       alternativePhoneCodes: [],
@@ -1411,7 +1427,7 @@ class PhoneNumberMaskConstant {
     ),
     PhoneNumberMaskCountry(
       title: "Zambia",
-      phoneCode: "+26#",
+      phoneCode: "+260",
       alternativePhoneCodes: [],
       iso2Code: "ZM",
       mask: "+### ## ### ####",

@@ -7,7 +7,9 @@ class PhoneNumberEmptyExpection implements Exception {
 
 /// Process of phone mask applying exception
 class PhoneNumberProcessExpection implements Exception {
-  const PhoneNumberProcessExpection({required this.message});
+  const PhoneNumberProcessExpection({
+    required this.message,
+  });
 
   final String message;
 }

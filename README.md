@@ -2,7 +2,6 @@
 ☎️ The package provides a simple parsing of phone numbers and various masking options.\
 The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
 
-
 ## Motivation
 Some server APIs provide unformatted phone numbers, while the application client must figure out what mask to apply to a given phone number and use it for display.
 
