@@ -3,7 +3,8 @@ import 'package:phone_number_mask/phone_number_mask.dart';
 import 'dart:developer' as developer;
 import 'dart:math' as math;
 
-/// Main package class
+/// Main package class.\
+/// ☎️ Dart package of simple parsing of phone numbers and various masking options.
 class PhoneNumberMask {
   /// [targetMask] The mask that will be used to bypass phone number parsing to overlay all phone numbers.\
   /// [defaultMask] The mask that will be used in case the phone number is not recognized.\

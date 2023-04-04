@@ -1,3 +1,6 @@
+## 2.0.2
+* Documentation fixes;
+
 ## 2.0.1
 * Pub fixes;
 
@@ -37,4 +40,4 @@
 * Fixes for russian numbers and bugfixes;
 
 ## 1.0.0
-* Initial version;
+* Debute release;
