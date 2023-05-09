@@ -23,7 +23,7 @@ This package can use for self phone field formatters.\
 In the list of constant countries, such data is collected to ensure the maximum match for parsing phone numbers.
 
 ## Usage
-### Main class
+### Main Class
 The package has the only main class to use - [PhoneNumberMask](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L11):
 
 | Data type | Name | Description | Default value |
@@ -42,7 +42,7 @@ final PhoneNumberMask _phoneNumberMask = PhoneNumberMask(
 );
 ```
 
-### Main method and example
+### Main Method
 The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L41) does all the parsing work.
 
 ```dart
@@ -67,10 +67,10 @@ The result is a separate class [PhoneNumberMaskResult](https://github.com/ivanga
 | **String?** | **mask** | The mask of this number in its pure form. |
 
 
-## Additional objects
+## Additional Objects
 Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMask.countries](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/constant.dart#L4).
 
 
-## Additional information
+## Additional Information
 For more details see example project.\
 And feel free to open an issue if you find any bugs or errors or suggestions for adding to phone number parsing or phone countries data.

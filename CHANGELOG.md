@@ -1,3 +1,6 @@
+## 2.1.1
+* Fix readme.
+
 ## 2.1.0
 * Readme and isPlus flag fixes;
 
