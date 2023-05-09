@@ -1,3 +1,6 @@
+## 2.1.0
+* Readme and isPlus flag fixes;
+
 ## 2.0.2
 * Documentation fixes;
 

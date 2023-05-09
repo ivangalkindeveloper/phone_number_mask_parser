@@ -71,19 +71,18 @@ class PhoneNumberMask {
         phoneNumber: phoneNumberResult,
       );
 
-      // 5) Plus
-      if (this.isPlus == false) {
-        phoneNumberResult = phoneNumberResult.replaceFirst("+", "");
-      }
-
-      // 6) Trim
+      // 5) Trim
       phoneNumberResult = phoneNumberResult.trim();
 
-      // 7) Result
+      // 6) Result
       return PhoneNumberMaskResult(
-        phoneNumberMasked: phoneNumberResult,
+        phoneNumberMasked: this.isPlus
+            ? phoneNumberResult
+            : phoneNumberResult.replaceFirst("+", ""),
         countryTitle: phoneNumberCountry.title,
-        phoneCode: phoneNumberCountry.phoneCode,
+        phoneCode: this.isPlus
+            ? phoneNumberCountry.phoneCode
+            : phoneNumberCountry.phoneCode?.replaceFirst("+", ""),
         iso2Code: phoneNumberCountry.iso2Code,
         mask: phoneNumberCountry.mask,
       );

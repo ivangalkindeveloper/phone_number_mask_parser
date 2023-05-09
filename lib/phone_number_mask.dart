@@ -1,4 +1,5 @@
 // ☎️ Dart package of simple parsing of phone numbers and various masking options.
+//  Check README: https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/README.md
 
 library phone_number_mask;
 

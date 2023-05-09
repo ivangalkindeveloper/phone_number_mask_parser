@@ -168,7 +168,7 @@ void main() {
     expect(result13.phoneNumberMasked, "299 307978");
     expect(result13.countryTitle, "Greenland");
     expect(result13.iso2Code, "GL");
-    expect(result13.phoneCode, "+299");
+    expect(result13.phoneCode, "299");
     expect(result13.mask, "+### ######");
   });
 }

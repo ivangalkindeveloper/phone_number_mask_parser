@@ -2,6 +2,18 @@
 ☎️ The package provides a simple parsing of phone numbers and various masking options.\
 The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
 
+<div align="center">
+
+  <a href="">![Pub Likes](https://img.shields.io/pub/likes/phone_number_mask?color=success)</a>
+  <a href="">![Pub Version](https://img.shields.io/pub/v/phone_number_mask?color=important)</a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+
+</div>
+
+<div align="center">
+  <a href="https://www.buymeacoffee.com/ivangalkin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="32px" width= "128px"></a>
+</div>
+
 ## Motivation
 Some server APIs provide unformatted phone numbers, while the application client must figure out what mask to apply to a given phone number and use it for display.
 
