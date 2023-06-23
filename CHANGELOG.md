@@ -1,3 +1,6 @@
+## 2.1.2
+* Fix last char in endless numbers.
+
 ## 2.1.1
 * Fix readme.
 

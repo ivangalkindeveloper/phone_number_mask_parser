@@ -192,7 +192,7 @@ class PhoneNumberMask {
     final List<String> result = [];
     int phoneNumberIndex = 0;
 
-    for (var index = 0; index < mask.length; index++) {
+    for (int index = 0; index < mask.length; index++) {
       if (phoneNumberIndex >= phoneNumber.length) {
         break;
       }
@@ -217,7 +217,7 @@ class PhoneNumberMask {
 
     final String resultString = result.join("");
 
-    if ((phoneNumber.length - 1) > phoneNumberIndex &&
+    if ((phoneNumber.length - 1) >= phoneNumberIndex &&
         this.isEndlessPhoneNumber) {
       final String endlessPart = phoneNumber.substring(phoneNumberIndex);
       return "$resultString $endlessPart";
