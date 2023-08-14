@@ -1,3 +1,6 @@
+## 2.2.0
+* Small refactoring.
+
 ## 2.1.2
 * Fix last char in endless numbers.
 

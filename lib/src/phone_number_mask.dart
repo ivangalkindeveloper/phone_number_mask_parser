@@ -1,4 +1,4 @@
-import 'package:phone_number_mask/src/exception/exception.dart';
+import 'package:phone_number_mask/src/domain/exception/exception.dart';
 import 'package:phone_number_mask/phone_number_mask.dart';
 import 'dart:developer' as developer;
 import 'dart:math' as math;

@@ -1,4 +1,4 @@
-import 'package:phone_number_mask/src/data/phone_number_mask_base.dart';
+import 'package:phone_number_mask/src/domain/entities/phone_number_mask_base.dart';
 
 /// Main library result class
 class PhoneNumberMaskResult implements IPhoneNumberMaskBaseModel {

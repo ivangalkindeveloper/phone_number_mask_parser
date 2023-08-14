@@ -1,4 +1,4 @@
-import 'package:phone_number_mask/src/data/phone_number_mask_base.dart';
+import 'package:phone_number_mask/src/domain/entities/phone_number_mask_base.dart';
 
 /// Country data
 class PhoneNumberMaskCountry implements IPhoneNumberMaskBaseModel {
