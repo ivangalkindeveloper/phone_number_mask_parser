@@ -383,7 +383,7 @@ class PhoneNumberMaskConstant {
       phoneCode: "+420",
       alternativePhoneCodes: [],
       iso2Code: "CZ",
-      mask: "+### ## ### ####",
+      mask: "+### ### ### ###",
     ),
     PhoneNumberMaskCountry(
       title: "Denmark",
@@ -1200,7 +1200,7 @@ class PhoneNumberMaskConstant {
       phoneCode: "+421",
       alternativePhoneCodes: [],
       iso2Code: "SK",
-      mask: "+### ## ### ####",
+      mask: "+### ### ### ###",
     ),
     PhoneNumberMaskCountry(
       title: "Slovenia",
