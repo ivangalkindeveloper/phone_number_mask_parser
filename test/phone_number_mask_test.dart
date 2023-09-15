@@ -118,11 +118,11 @@ void main() {
     final PhoneNumberMaskResult result2 = phoneNumberMask0.apply(
       phoneNumber: "4201234567896",
     );
-    expect(result2.phoneNumberMasked, "+420 12 345 6789 6");
+    expect(result2.phoneNumberMasked, "+420 123 456 789 6");
     expect(result2.countryTitle, "Czech Republic");
     expect(result2.iso2Code, "CZ");
     expect(result2.phoneCode, "+420");
-    expect(result2.mask, "+### ## ### ####");
+    expect(result2.mask, "+### ### ### ###");
 
     final PhoneNumberMask phoneNumberMask1 = PhoneNumberMask(
       isEndlessPhoneNumber: false,
