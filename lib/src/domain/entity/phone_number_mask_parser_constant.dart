@@ -1,1727 +1,1714 @@
-import 'package:phone_number_mask/phone_number_mask.dart';
+import 'package:phone_number_mask_parser/phone_number_mask_parser.dart';
 
 /// Main package constants
-class PhoneNumberMaskConstant {
-  static const List<PhoneNumberMaskCountry> countries = [
-    PhoneNumberMaskCountry(
+class PhoneNumberMaskParserConstant {
+  static const int maxLengthPhoneCode = 4;
+
+  static const List<PhoneNumberMaskParserCountry> countries = [
+    PhoneNumberMaskParserCountry(
       title: "Afghanistan",
       phoneCode: "+93",
       alternativePhoneCodes: [],
       iso2Code: "AF",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Albania",
       phoneCode: "+355",
       alternativePhoneCodes: [],
       iso2Code: "AL",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Algeria",
       phoneCode: "+213",
       alternativePhoneCodes: [],
       iso2Code: "DZ",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "United States",
       phoneCode: "+1",
       alternativePhoneCodes: [],
       iso2Code: "US",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "American Samoa",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1684",
+        "+1 (684)",
       ],
       iso2Code: "AS",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Andorra",
       phoneCode: "+376",
       alternativePhoneCodes: [],
       iso2Code: "AD",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Angola",
       phoneCode: "+244",
       alternativePhoneCodes: [],
       iso2Code: "AO",
       mask: "+### #### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Anguilla",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1264",
+        "+1 (264)",
       ],
       iso2Code: "AI",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Antigua and Barbuda",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1268",
+        "+1 (268)",
       ],
       iso2Code: "AG",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Argentina",
       phoneCode: "+54",
       alternativePhoneCodes: [],
       iso2Code: "AR",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Armenia",
       phoneCode: "+374",
       alternativePhoneCodes: [],
       iso2Code: "AM",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Aruba",
       phoneCode: "+297",
       alternativePhoneCodes: [],
       iso2Code: "AW",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Australia",
       phoneCode: "+61",
       alternativePhoneCodes: [],
       iso2Code: "AU",
       mask: "+## #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Austria",
       phoneCode: "+43",
       alternativePhoneCodes: [],
       iso2Code: "AT",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Azerbaijan",
       phoneCode: "+994",
       alternativePhoneCodes: [],
       iso2Code: "AZ",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bahamas",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1242",
+        "+1 (242)",
       ],
       iso2Code: "BS",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bahrain",
       phoneCode: "+973",
       alternativePhoneCodes: [],
       iso2Code: "BH",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bangladesh",
       phoneCode: "+880",
       alternativePhoneCodes: [],
       iso2Code: "BD",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Barbados",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1246",
+        "+1 (246)",
       ],
       iso2Code: "BB",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Belarus",
       phoneCode: "+375",
       alternativePhoneCodes: [],
       iso2Code: "BY",
       mask: "+### (##) ###-##-##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Belgium",
       phoneCode: "+32",
       alternativePhoneCodes: [],
       iso2Code: "BE",
       mask: "+## ### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Belize",
       phoneCode: "+501",
       alternativePhoneCodes: [],
       iso2Code: "BZ",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Benin",
       phoneCode: "+229",
       alternativePhoneCodes: [],
       iso2Code: "BJ",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bermuda",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1441",
+        "+1 (441)",
       ],
       iso2Code: "BM",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bhutan",
       phoneCode: "+975",
       alternativePhoneCodes: [],
       iso2Code: "BT",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bosnia and Herzegovina",
       phoneCode: "+387",
       alternativePhoneCodes: [],
       iso2Code: "BA",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Botswana",
       phoneCode: "+267",
       alternativePhoneCodes: [],
       iso2Code: "BW",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Brazil",
       phoneCode: "+55",
       alternativePhoneCodes: [],
       iso2Code: "BR",
       mask: "+## (##) ####-####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "British Indian Ocean Territory",
       phoneCode: "+246",
       alternativePhoneCodes: [],
       iso2Code: "IO",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bulgaria",
       phoneCode: "+359",
       alternativePhoneCodes: [],
       iso2Code: "BG",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Burkina Faso",
       phoneCode: "+226",
       alternativePhoneCodes: [],
       iso2Code: "BF",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Burundi",
       phoneCode: "+257",
       alternativePhoneCodes: [],
       iso2Code: "BI",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cambodia",
       phoneCode: "+855",
       alternativePhoneCodes: [],
       iso2Code: "KH",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cameroon",
       phoneCode: "+237",
       alternativePhoneCodes: [],
       iso2Code: "CM",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Canada",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1204",
-        "+1236",
-        "+1226",
-        "+1306",
-        "+1367",
-        "+1403",
-        "+1506",
-        "+1709",
-        "+1782",
-        "+1867",
+        "+1 (204)",
+        "+1 (236)",
+        "+1 (226)",
+        "+1 (306)",
+        "+1 (367)",
+        "+1 (403)",
+        "+1 (506)",
+        "+1 (709)",
+        "+1 (782)",
+        "+1 (867)",
       ],
       iso2Code: "CA",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cape Verde",
       phoneCode: "+238",
       alternativePhoneCodes: [],
       iso2Code: "CV",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cayman Islands",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1345",
+        "+1 (345)",
       ],
       iso2Code: "KY",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Central African Republic",
       phoneCode: "+236",
       alternativePhoneCodes: [],
       iso2Code: "CF",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Chad",
       phoneCode: "+235",
       alternativePhoneCodes: [],
       iso2Code: "TD",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Chile",
       phoneCode: "+56",
       alternativePhoneCodes: [],
       iso2Code: "CL",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "China",
       phoneCode: "+86",
       alternativePhoneCodes: [],
       iso2Code: "CN",
       mask: "+## ### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Christmas Island",
       phoneCode: "+61",
-      alternativePhoneCodes: [],
+      alternativePhoneCodes: [
+        "+61 8 9164",
+      ],
       iso2Code: "CX",
       mask: "+## # #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Colombia",
       phoneCode: "+57",
       alternativePhoneCodes: [],
       iso2Code: "CO",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Comoros",
       phoneCode: "+269",
       alternativePhoneCodes: [],
       iso2Code: "KM",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Congo",
       phoneCode: "+242",
       alternativePhoneCodes: [],
       iso2Code: "CG",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cook Islands",
       phoneCode: "+682",
       alternativePhoneCodes: [],
       iso2Code: "CK",
       mask: "+### ## ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Costa Rica",
       phoneCode: "+506",
       alternativePhoneCodes: [],
       iso2Code: "CR",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Croatia",
       phoneCode: "+385",
       alternativePhoneCodes: [],
       iso2Code: "HR",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cuba",
       phoneCode: "+53",
       alternativePhoneCodes: [],
       iso2Code: "CU",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Cyprus",
       phoneCode: "+357",
       alternativePhoneCodes: [],
       iso2Code: "CY",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Czech Republic",
       phoneCode: "+420",
       alternativePhoneCodes: [],
       iso2Code: "CZ",
       mask: "+### ### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Denmark",
       phoneCode: "+45",
       alternativePhoneCodes: [],
       iso2Code: "DK",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Djibouti",
       phoneCode: "+253",
       alternativePhoneCodes: [],
       iso2Code: "DJ",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Dominica",
       phoneCode: "+1767",
       alternativePhoneCodes: [],
       iso2Code: "DM",
       mask: "+#### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Dominican Republic",
       phoneCode: "+1809",
       alternativePhoneCodes: [],
       iso2Code: "DO",
       mask: "+#### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Ecuador",
       phoneCode: "+593",
       alternativePhoneCodes: [],
       iso2Code: "EC",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Egypt",
       phoneCode: "+20",
       alternativePhoneCodes: [],
       iso2Code: "EG",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "El Salvador",
       phoneCode: "+503",
       alternativePhoneCodes: [],
       iso2Code: "SV",
       mask: "+### ## #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Equatorial Guinea",
       phoneCode: "+240",
       alternativePhoneCodes: [],
       iso2Code: "GQ",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Eritrea",
       phoneCode: "+291",
       alternativePhoneCodes: [],
       iso2Code: "ER",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Estonia",
       phoneCode: "+372",
       alternativePhoneCodes: [],
       iso2Code: "EE",
       mask: "+### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Ethiopia",
       phoneCode: "+251",
       alternativePhoneCodes: [],
       iso2Code: "ET",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Faroe Islands",
       phoneCode: "+298",
       alternativePhoneCodes: [],
       iso2Code: "FO",
       mask: "+### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Fiji",
       phoneCode: "+679",
       alternativePhoneCodes: [],
       iso2Code: "FJ",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Finland",
       phoneCode: "+358",
       alternativePhoneCodes: [],
       iso2Code: "FI",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "France",
       phoneCode: "+33",
       alternativePhoneCodes: [],
       iso2Code: "FR",
       mask: "+## # ## ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "French Guiana",
       phoneCode: "+594",
       alternativePhoneCodes: [],
       iso2Code: "GF",
       mask: "+### ### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "French Polynesia",
       phoneCode: "+689",
       alternativePhoneCodes: [],
       iso2Code: "PF",
       mask: "+### ## ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Gabon",
       phoneCode: "+241",
       alternativePhoneCodes: [],
       iso2Code: "GA",
       mask: "+### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Gambia",
       phoneCode: "+220",
       alternativePhoneCodes: [],
       iso2Code: "GM",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Georgia",
       phoneCode: "+995",
       alternativePhoneCodes: [],
       iso2Code: "GE",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Germany",
       phoneCode: "+49",
       alternativePhoneCodes: [],
       iso2Code: "DE",
       mask: "+## ## #########",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Ghana",
       phoneCode: "+233",
       alternativePhoneCodes: [],
       iso2Code: "GH",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Gibraltar",
       phoneCode: "+350",
       alternativePhoneCodes: [],
       iso2Code: "GI",
       mask: "+### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Greece",
       phoneCode: "+30",
       alternativePhoneCodes: [],
       iso2Code: "GR",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Greenland",
       phoneCode: "+299",
       alternativePhoneCodes: [],
       iso2Code: "GL",
       mask: "+### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Grenada",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1473",
+        "+1 (473)",
       ],
       iso2Code: "GD",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
-      title: "Guadeloupe",
+    PhoneNumberMaskParserCountry(
+      title: "Guadeloupe, Saint Barthélemy, Saint Martin",
       phoneCode: "+590",
       alternativePhoneCodes: [],
-      iso2Code: "GP",
+      iso2Code: "GP, BL, MF",
       mask: "+### ### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Guam",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1671",
+        "+1 (671)",
       ],
       iso2Code: "GU",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Guatemala",
       phoneCode: "+502",
       alternativePhoneCodes: [],
       iso2Code: "GT",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Guinea",
       phoneCode: "+224",
       alternativePhoneCodes: [],
       iso2Code: "GN",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Guinea-Bissau",
       phoneCode: "+245",
       alternativePhoneCodes: [],
       iso2Code: "GW",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Guyana",
       phoneCode: "+592",
       alternativePhoneCodes: [],
       iso2Code: "GY",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Haiti",
       phoneCode: "+509",
       alternativePhoneCodes: [],
       iso2Code: "HT",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Holy See (Vatican City State)",
       phoneCode: "+379",
-      alternativePhoneCodes: [
-        "+39",
-      ],
+      alternativePhoneCodes: [],
       iso2Code: "VA",
       mask: "+### #### #######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Honduras",
       phoneCode: "+504",
       alternativePhoneCodes: [],
       iso2Code: "HN",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Hungary",
       phoneCode: "+36",
       alternativePhoneCodes: [],
       iso2Code: "HU",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Hungary (Alternative)",
       phoneCode: "+06",
       alternativePhoneCodes: [],
       iso2Code: "HU",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Iceland",
       phoneCode: "+354",
       alternativePhoneCodes: [],
       iso2Code: "IS",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "India",
       phoneCode: "+91",
       alternativePhoneCodes: [],
       iso2Code: "IN",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Indonesia",
       phoneCode: "+62",
       alternativePhoneCodes: [],
       iso2Code: "ID",
       mask: "+## ## #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Iraq",
       phoneCode: "+964",
       alternativePhoneCodes: [],
       iso2Code: "IQ",
       mask: "+### (##) ### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Ireland",
       phoneCode: "+353",
       alternativePhoneCodes: [],
       iso2Code: "IE",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Israel",
       phoneCode: "+972",
       alternativePhoneCodes: [],
       iso2Code: "IL",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Italy",
       phoneCode: "+39",
       alternativePhoneCodes: [],
       iso2Code: "IT",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Jamaica",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1876",
+        "+1 (876)",
       ],
       iso2Code: "JM",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Japan",
       phoneCode: "+81",
       alternativePhoneCodes: [],
       iso2Code: "JP",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Jordan",
       phoneCode: "+962",
       alternativePhoneCodes: [],
       iso2Code: "JO",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Kazakhstan",
       phoneCode: "+7",
       alternativePhoneCodes: [
-        "+87",
-        "+77",
-        "+76",
+        "+8 (7",
+        "+7 (7",
+        "+7 (6",
       ],
       iso2Code: "KZ",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Kenya",
       phoneCode: "+254",
       alternativePhoneCodes: [],
       iso2Code: "KE",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Kiribati",
       phoneCode: "+686",
       alternativePhoneCodes: [],
       iso2Code: "KI",
       mask: "+### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Kuwait",
       phoneCode: "+965",
       alternativePhoneCodes: [],
       iso2Code: "KW",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Kyrgyzstan",
       phoneCode: "+996",
       alternativePhoneCodes: [],
       iso2Code: "KG",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Latvia",
       phoneCode: "+371",
       alternativePhoneCodes: [],
       iso2Code: "LV",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Lebanon",
       phoneCode: "+961",
       alternativePhoneCodes: [],
       iso2Code: "LB",
       mask: "+### ## ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Lesotho",
       phoneCode: "+266",
       alternativePhoneCodes: [],
       iso2Code: "LS",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Liberia",
       phoneCode: "+231",
       alternativePhoneCodes: [],
       iso2Code: "LR",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Liechtenstein",
       phoneCode: "+423",
       alternativePhoneCodes: [],
       iso2Code: "LI",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Lithuania",
       phoneCode: "+370",
       alternativePhoneCodes: [],
       iso2Code: "LT",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Luxembourg",
       phoneCode: "+352",
       alternativePhoneCodes: [],
       iso2Code: "LU",
       mask: "+### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Madagascar",
       phoneCode: "+261",
       alternativePhoneCodes: [],
       iso2Code: "MG",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Malawi",
       phoneCode: "+265",
       alternativePhoneCodes: [],
       iso2Code: "MW",
       mask: "+### #########",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Malaysia",
       phoneCode: "+60",
       alternativePhoneCodes: [],
       iso2Code: "MY",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Maldives",
       phoneCode: "+960",
       alternativePhoneCodes: [],
       iso2Code: "MV",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mali",
       phoneCode: "+223",
       alternativePhoneCodes: [],
       iso2Code: "ML",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Malta",
       phoneCode: "+356",
       alternativePhoneCodes: [],
       iso2Code: "MT",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Marshall Islands",
       phoneCode: "+692",
       alternativePhoneCodes: [],
       iso2Code: "MH",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Martinique",
       phoneCode: "+596",
       alternativePhoneCodes: [],
       iso2Code: "MQ",
       mask: "+### ### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mauritania",
       phoneCode: "+222",
       alternativePhoneCodes: [],
       iso2Code: "MR",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mauritius",
       phoneCode: "+230",
       alternativePhoneCodes: [],
       iso2Code: "MU",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mayotte",
       phoneCode: "+262",
       alternativePhoneCodes: [
-        "+262269",
-        "+262639",
+        "+262 269",
+        "+262 639",
       ],
       iso2Code: "YT",
       mask: "+### ### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mexico",
       phoneCode: "+52",
       alternativePhoneCodes: [],
       iso2Code: "MX",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Monaco",
       phoneCode: "+377",
       alternativePhoneCodes: [],
       iso2Code: "MC",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mongolia",
       phoneCode: "+976",
       alternativePhoneCodes: [],
       iso2Code: "MN",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Montenegro",
       phoneCode: "+382",
       alternativePhoneCodes: [],
       iso2Code: "ME",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Montserrat",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1664",
+        "+1 (664)",
       ],
       iso2Code: "MS",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Morocco",
       phoneCode: "+212",
       alternativePhoneCodes: [],
       iso2Code: "MA",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Myanmar",
       phoneCode: "+95",
       alternativePhoneCodes: [],
       iso2Code: "MM",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Namibia",
       phoneCode: "+264",
       alternativePhoneCodes: [],
       iso2Code: "NA",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Nauru",
       phoneCode: "+674",
       alternativePhoneCodes: [],
       iso2Code: "NR",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Nepal",
       phoneCode: "+977",
       alternativePhoneCodes: [],
       iso2Code: "NP",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Netherlands",
       phoneCode: "+31",
       alternativePhoneCodes: [],
       iso2Code: "NL",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Netherlands Antilles",
       phoneCode: "+599",
       alternativePhoneCodes: [],
       iso2Code: "AN",
       mask: "+### ########",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "New Caledonia",
       phoneCode: "+687",
       alternativePhoneCodes: [],
       iso2Code: "NC",
       mask: "+### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "New Zealand",
       phoneCode: "+64",
       alternativePhoneCodes: [],
       iso2Code: "NZ",
       mask: "+## (#) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Nicaragua",
       phoneCode: "+505",
       alternativePhoneCodes: [],
       iso2Code: "NI",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Niger",
       phoneCode: "+227",
       alternativePhoneCodes: [],
       iso2Code: "NE",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Nigeria",
       phoneCode: "+234",
       alternativePhoneCodes: [],
       iso2Code: "NG",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Niue",
       phoneCode: "+683",
       alternativePhoneCodes: [],
       iso2Code: "NU",
       mask: "+### #######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Norfolk Island",
       phoneCode: "+672",
       alternativePhoneCodes: [],
       iso2Code: "NF",
       mask: "+### # ## ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Northern Mariana Islands",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1670",
+        "+1 (670)",
       ],
       iso2Code: "MP",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Norway",
       phoneCode: "+47",
       alternativePhoneCodes: [],
       iso2Code: "NO",
       mask: "+## #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Oman",
       phoneCode: "+968",
       alternativePhoneCodes: [],
       iso2Code: "OM",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Pakistan",
       phoneCode: "+92",
       alternativePhoneCodes: [],
       iso2Code: "PK",
       mask: "+## ### #######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Palau",
       phoneCode: "+680",
       alternativePhoneCodes: [],
       iso2Code: "PW",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Panama",
       phoneCode: "+507",
       alternativePhoneCodes: [],
       iso2Code: "PA",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Papua New Guinea",
       phoneCode: "+675",
       alternativePhoneCodes: [],
       iso2Code: "PG",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Paraguay",
       phoneCode: "+595",
       alternativePhoneCodes: [],
       iso2Code: "PY",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Peru",
       phoneCode: "+51",
       alternativePhoneCodes: [],
       iso2Code: "PE",
       mask: "+## ## #########",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Philippines",
       phoneCode: "+63",
       alternativePhoneCodes: [],
       iso2Code: "PH",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Poland",
       phoneCode: "+48",
       alternativePhoneCodes: [],
       iso2Code: "PL",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Portugal",
       phoneCode: "+351",
       alternativePhoneCodes: [],
       iso2Code: "PT",
       mask: "+### ### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Puerto Rico",
       phoneCode: "+1939",
       alternativePhoneCodes: [],
       iso2Code: "PR",
       mask: "+#### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Qatar",
       phoneCode: "+974",
       alternativePhoneCodes: [],
       iso2Code: "QA",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Romania",
       phoneCode: "+40",
       alternativePhoneCodes: [],
       iso2Code: "RO",
       mask: "+## ### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Rwanda",
       phoneCode: "+250",
       alternativePhoneCodes: [],
       iso2Code: "RW",
       mask: "### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Samoa",
       phoneCode: "+685",
       alternativePhoneCodes: [],
       iso2Code: "WS",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "San Marino",
       phoneCode: "+378",
       alternativePhoneCodes: [],
       iso2Code: "SM",
       mask: "+### #### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Saudi Arabia",
       phoneCode: "+966",
       alternativePhoneCodes: [],
       iso2Code: "SA",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Senegal",
       phoneCode: "+221",
       alternativePhoneCodes: [],
       iso2Code: "SN",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Serbia",
       phoneCode: "+381",
       alternativePhoneCodes: [],
       iso2Code: "RS",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Seychelles",
       phoneCode: "+248",
       alternativePhoneCodes: [],
       iso2Code: "SC",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Sierra Leone",
       phoneCode: "+232",
       alternativePhoneCodes: [],
       iso2Code: "SL",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Singapore",
       phoneCode: "+65",
       alternativePhoneCodes: [],
       iso2Code: "SG",
       mask: "+## #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Slovakia",
       phoneCode: "+421",
       alternativePhoneCodes: [],
       iso2Code: "SK",
       mask: "+### ### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Slovenia",
       phoneCode: "+386",
       alternativePhoneCodes: [],
       iso2Code: "SI",
       mask: "+### # ### ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Solomon Islands",
       phoneCode: "+677",
       alternativePhoneCodes: [],
       iso2Code: "SB",
       mask: "+### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "South Africa",
       phoneCode: "+27",
       alternativePhoneCodes: [],
       iso2Code: "ZA",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "South Sudan",
       phoneCode: "+211",
       alternativePhoneCodes: [],
       iso2Code: "SS",
       mask: "+### #### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Spain",
       phoneCode: "+34",
       alternativePhoneCodes: [],
       iso2Code: "ES",
       mask: "+## ### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Sri Lanka",
       phoneCode: "+94",
       alternativePhoneCodes: [],
       iso2Code: "LK",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Sudan",
       phoneCode: "+249",
       alternativePhoneCodes: [],
       iso2Code: "SD",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Suriname",
       phoneCode: "+597",
       alternativePhoneCodes: [],
       iso2Code: "SR",
       mask: "+### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Swaziland",
       phoneCode: "+268",
       alternativePhoneCodes: [],
       iso2Code: "SZ",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Sweden",
       phoneCode: "+46",
       alternativePhoneCodes: [],
       iso2Code: "SE",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Switzerland",
       phoneCode: "+41",
       alternativePhoneCodes: [],
       iso2Code: "CH",
       mask: "+## ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Tajikistan",
       phoneCode: "+992",
       alternativePhoneCodes: [],
       iso2Code: "TJ",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Thailand",
       phoneCode: "+66",
       alternativePhoneCodes: [],
       iso2Code: "TH",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Togo",
       phoneCode: "+228",
       alternativePhoneCodes: [],
       iso2Code: "TG",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Tokelau",
       phoneCode: "+690",
       alternativePhoneCodes: [],
       iso2Code: "TK",
       mask: "+### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Tonga",
       phoneCode: "+676",
       alternativePhoneCodes: [],
       iso2Code: "TO",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Trinidad and Tobago",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1868",
+        "+1 (868)",
       ],
       iso2Code: "TT",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Tunisia",
       phoneCode: "+216",
       alternativePhoneCodes: [],
       iso2Code: "TN",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Turkey",
       phoneCode: "+90",
       alternativePhoneCodes: [],
       iso2Code: "TR",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Turkmenistan",
       phoneCode: "+993",
       alternativePhoneCodes: [],
       iso2Code: "TM",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Turks and Caicos Islands",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1649",
+        "+1 (649)",
       ],
       iso2Code: "TC",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Tuvalu",
       phoneCode: "+688",
       alternativePhoneCodes: [],
       iso2Code: "TV",
       mask: "+### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Uganda",
       phoneCode: "+256",
       alternativePhoneCodes: [],
       iso2Code: "UG",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Ukraine",
       phoneCode: "+380",
       alternativePhoneCodes: [],
       iso2Code: "UA",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "United Arab Emirates",
       phoneCode: "+971",
       alternativePhoneCodes: [],
       iso2Code: "AE",
       mask: "+### ## ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "United Kingdom",
       phoneCode: "+44",
-      alternativePhoneCodes: [
-        "+447",
-      ],
+      alternativePhoneCodes: [],
       iso2Code: "GB",
       mask: "+## #### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Uruguay",
       phoneCode: "+598",
       alternativePhoneCodes: [],
       iso2Code: "UY",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Uzbekistan",
       phoneCode: "+998",
       alternativePhoneCodes: [],
       iso2Code: "UZ",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Vanuatu",
       phoneCode: "+678",
       alternativePhoneCodes: [],
       iso2Code: "VU",
       mask: "+### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Wallis and Futuna",
       phoneCode: "+681",
       alternativePhoneCodes: [],
       iso2Code: "WF",
       mask: "+### ## ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Yemen",
       phoneCode: "+967",
       alternativePhoneCodes: [],
       iso2Code: "YE",
       mask: "+### # ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Zambia",
       phoneCode: "+260",
       alternativePhoneCodes: [],
       iso2Code: "ZM",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Zimbabwe",
       phoneCode: "+263",
       alternativePhoneCodes: [],
       iso2Code: "ZW",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Bolivia, Plurinational State of",
       phoneCode: "+591",
       alternativePhoneCodes: [],
       iso2Code: "BO",
       mask: "+### ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Brunei Darussalam",
       phoneCode: "+673",
       alternativePhoneCodes: [],
       iso2Code: "BN",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Congo, The Democratic Republic of the",
       phoneCode: "+243",
       alternativePhoneCodes: [],
       iso2Code: "CD",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
-      title: "Cote d\"Ivoire",
+    PhoneNumberMaskParserCountry(
+      title: "Cote d'Ivoire",
       phoneCode: "+225",
       alternativePhoneCodes: [],
       iso2Code: "CI",
       mask: "+### ########",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Falkland Islands (Malvinas)",
       phoneCode: "+500",
       alternativePhoneCodes: [],
       iso2Code: "FK",
       mask: "+### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Guernsey",
       phoneCode: "+44",
       alternativePhoneCodes: [
-        "+441534",
-        "+447700",
-        "+447797",
-        "+447829",
-        "+447937",
+        "+44 1534",
+        "+44 7700",
+        "+44 7797",
+        "+44 7829",
+        "+44 7937",
       ],
       iso2Code: "GG",
       mask: "+## (#) #### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Hong Kong",
       phoneCode: "+852",
       alternativePhoneCodes: [],
       iso2Code: "HK",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Iran, Islamic Republic of",
       phoneCode: "+98",
       alternativePhoneCodes: [],
       iso2Code: "IR",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
-      title: "Korea, Democratic People\"s Republic of",
+    PhoneNumberMaskParserCountry(
+      title: "Korea, Democratic People's Republic of",
       phoneCode: "+850",
       alternativePhoneCodes: [],
       iso2Code: "KP",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Korea, Republic of",
       phoneCode: "+82",
       alternativePhoneCodes: [],
       iso2Code: "KR",
       mask: "+## # ### ####",
     ),
-    PhoneNumberMaskCountry(
-      title: "(Laos) Lao People\"s Democratic Republic",
+    PhoneNumberMaskParserCountry(
+      title: "(Laos) Lao People's Democratic Republic",
       phoneCode: "+856",
       alternativePhoneCodes: [],
       iso2Code: "LA",
       mask: "+### ## #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Libyan Arab Jamahiriya",
       phoneCode: "+218",
       alternativePhoneCodes: [],
       iso2Code: "LY",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Macao",
       phoneCode: "+853",
       alternativePhoneCodes: [],
       iso2Code: "MO",
       mask: "+### #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Macedonia",
       phoneCode: "+389",
       alternativePhoneCodes: [],
       iso2Code: "MK",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Micronesia, Federated States of",
       phoneCode: "+691",
       alternativePhoneCodes: [],
       iso2Code: "FM",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Moldova, Republic of",
       phoneCode: "+373",
       alternativePhoneCodes: [],
       iso2Code: "MD",
       mask: "+### ### #####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Mozambique",
       phoneCode: "+258",
       alternativePhoneCodes: [],
       iso2Code: "MZ",
       mask: "+### ### ######",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Palestina",
       phoneCode: "+970",
       alternativePhoneCodes: [],
       iso2Code: "PS",
       mask: "+### # ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Réunion Island",
       phoneCode: "+262",
       alternativePhoneCodes: [
-        "+262262",
-        "+262263",
-        "+262692",
-        "+262693",
-        "+262976",
+        "+262 262",
+        "+262 263",
+        "+262 692",
+        "+262 693",
+        "+262 976",
       ],
       iso2Code: "RE",
       mask: "+### ### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Russian Federation",
       phoneCode: "+7",
       alternativePhoneCodes: [
-        "+89",
-        "+88",
-        "+83",
-        "+84",
-        "+79",
+        "+8 (9",
+        "+8 (8",
+        "+7 (9",
+        "+8 (47",
+        "+8 (48",
+        "+8 (49",
       ],
       iso2Code: "RU",
       mask: "+# (###) ###-##-##",
     ),
-    PhoneNumberMaskCountry(
-      title: "Saint Barthélemy",
-      phoneCode: "+590",
-      alternativePhoneCodes: [],
-      iso2Code: "BL",
-      mask: "+### ### ## ## ##",
-    ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Saint Helena, Ascension and Tristan Da Cunha",
       phoneCode: "+290",
       alternativePhoneCodes: [],
       iso2Code: "SH",
       mask: "+### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Saint Kitts and Nevis",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1869",
+        "+1 (869)",
       ],
       iso2Code: "KN",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Saint Lucia",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1758",
+        "+1 (758)",
       ],
       iso2Code: "LC",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
-      title: "Saint Martin",
-      phoneCode: "+590",
-      alternativePhoneCodes: [],
-      iso2Code: "MF",
-      mask: "+### ### ######",
-    ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Saint Pierre and Miquelon",
       phoneCode: "+508",
       alternativePhoneCodes: [],
       iso2Code: "PM",
       mask: "+### ## ## ##",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Saint Vincent and the Grenadines",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1784",
+        "+1 (784)",
       ],
       iso2Code: "VC",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Sao Tome and Principe",
       phoneCode: "+239",
       alternativePhoneCodes: [],
       iso2Code: "ST",
       mask: "+### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Somalia",
       phoneCode: "+252",
       alternativePhoneCodes: [],
       iso2Code: "SO",
       mask: "+### ## ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Syrian Arab Republic",
       phoneCode: "+963",
       alternativePhoneCodes: [],
       iso2Code: "SY",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Taiwan",
       phoneCode: "+886",
       alternativePhoneCodes: [],
       iso2Code: "TW",
       mask: "+### # #### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Tanzania",
       phoneCode: "+255",
       alternativePhoneCodes: [],
       iso2Code: "TZ",
       mask: "+### ## ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Timor-Leste",
       phoneCode: "+670",
       alternativePhoneCodes: [],
       iso2Code: "TL",
       mask: "+### ### ###",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Venezuela, Bolivarian Republic of",
       phoneCode: "+58",
       alternativePhoneCodes: [],
       iso2Code: "VE",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
-      title: "Viet Nam",
+    PhoneNumberMaskParserCountry(
+      title: "Vietnam",
       phoneCode: "+84",
       alternativePhoneCodes: [],
       iso2Code: "VN",
       mask: "+## ### ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Virgin Islands, British",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1284",
+        "+1 (284)",
       ],
       iso2Code: "VG",
       mask: "+# (###) ### ####",
     ),
-    PhoneNumberMaskCountry(
+    PhoneNumberMaskParserCountry(
       title: "Virgin Islands, U.S.",
       phoneCode: "+1",
       alternativePhoneCodes: [
-        "+1340",
+        "+1 (340)",
       ],
       iso2Code: "VI",
       mask: "+# (###) ### ####",

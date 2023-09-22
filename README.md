@@ -1,4 +1,4 @@
-# Phone number mask
+# Phone number mask parser
 ☎️ The package provides a simple parsing of phone numbers and various masking options.\
 The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
 
@@ -24,51 +24,62 @@ In the list of constant countries, such data is collected to ensure the maximum 
 
 ## Usage
 ### Main Class
-The package has the only main class to use - [PhoneNumberMask](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L11):
+The package has the only main class to use - [PhoneNumberMaskParser](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/phone_number_mask_parser.dart#L9):
 
 | Data type | Name | Description | Default value |
 |-----------|------|-------------|---------------|
 | **String?** | **targetMask** | The mask that will be used to bypass phone number parsing to overlay all phone numbers. Use this field to use only one mask for all phone numbers. | **null** |
 | **String?** | **defaultMask** | The mask that will be used in case the phone number is not recognized. If this field is not specified, the class will use the default mask "+### ### #### ####". | **"+### ### #### ####"** |
 | **bool** | **isPlus** | The flag responsible for the plus sign at the very beginning. | **true** |
-| **bool** | **isEndlessPhoneNumber** | the flag that doesn't cut the last part of the phone number if it exceeds the length of the mask. | **false** |
+| **bool** | **isEndless** | the flag that doesn't cut the last part of the phone number if it exceeds the length of the mask. | **false** |
 
 ```dart
-final PhoneNumberMask _phoneNumberMask = PhoneNumberMask(
+const PhoneNumberMaskParser maskParser = PhoneNumberMaskParser(
     targetMask: "+## #### ######",
     defaultMask: "+### (###) ### ####",
     isPlus: false,
-    isEndlessPhoneNumber: true,
+    isEndless: true,
 );
 ```
 
 ### Main Method
-The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/phone_number_mask.dart#L41) does all the parsing work.
+The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/phone_number_mask_parser.dart#L34) does all the parsing work.
 
 ```dart
-  final PhoneNumberMask _phoneNumberMask = PhoneNumberMask();
-  final PhoneNumberMaskResult _result = _phoneNumberMask.apply(phoneNumber: "4492330323912034");
-  print(_result.phoneNumberMasked); // +44 9233 032391
-  print(_result.countryTitle); // United Kingdom
-  print(_result.phoneCode); // 44
-  print(_result.iso2Code); // GB
-  print(_result.mask); // +## #### ######
+  const PhoneNumberMaskParser maskParser = PhoneNumberMaskParser();
+  final PhoneNumberMaskParserResult result = maskParser.apply(phoneNumber: "4492330323912034");
+  print(result.PhoneNumberMaskParsered); // +44 9233 032391
+  print(result.country?.title); // United Kingdom
+  print(result.country?.iso2Code); // GB
+  print(result.country?.phoneCode); // 44
+  print(result.country?.alternativePhoneCodes); // [+447]
+  print(result.country?.mask); // +## #### ######
 ```
 
 ### Result
-The result is a separate class [PhoneNumberMaskResult](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/data.dart#L15) that provides the following fields:
+The result is a separate class [PhoneNumberMaskParserResult](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/data.dart#L15) that provides the following fields:
 
 | Data type | Name | Description |
 |-----------|------|-------------|
-| **String** | **phoneNumberMasked** | Formatted phone number. |
-| **String?** | **countryTitle** | Name of the country of the phone. |
-| **String?** | **phoneCode** | Phone country code. |
-| **String?** | **iso2Code** | Country code according to ISO 3166 standard. |
-| **String?** | **mask** | The mask of this number in its pure form. |
+| **String** | **phoneNumberMasked** | Formatted phone number in mask. |
+| **PhoneNumberMaskParserCountry?** | **country** | Country of parsered phone number. |
 
+Country of parsered phone number [PhoneNumberMaskParserCountry](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/domain/entity/phone_number_mask_parser_result.dart#L15):
+| Data type | Name | Description |
+|-----------|------|-------------|
+| **String** | **title** | Name of the country of the phone. |
+| **String** | **iso2Code** | Country code according to ISO 3166 standard. |
+| **String** | **phoneCode** | Phone country code. |
+| **List<String>** | **alternativePhoneCodes** | Alternative phone country code. |
+| **String** | **mask** | The mask of this number in its pure form. |
+
+### Efficiency
+Determining the country by the potential telephone code using hash table - O(1).
+Overlaying a target or recognized country mask - O(N).
+(N - length of the recognized phone number string)
 
 ## Additional Objects
-Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMask.countries](https://github.com/ivangalkindeveloper/phone_number_mask/blob/master/lib/src/constant.dart#L4).
+Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMaskParser.countries](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/domain/entity/phone_number_mask_parser_constant.dart#L7).
 
 
 ## Additional Information

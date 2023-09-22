@@ -1,3 +1,8 @@
+## 3.0.0
+* New package name;
+* Removing useless cycles;
+* Refactoring algorithm work - using hash for phone codes data.
+
 ## 2.3.1
 * Unit Tests.
 
