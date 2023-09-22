@@ -1,6 +1,5 @@
 # Phone number mask parser
 
-
 <div align="center">
   ☎️ The package provides a simple parsing of phone numbers and various masking options.
   <br>
@@ -78,12 +77,7 @@ To apply your own mask, specify the target mask:
     phoneNumber: "930293023049495565",
   );
   print(result.phoneNumberMasked); // +93 02 (9302) 3049
-  print(result.country?.title); // null
-  print(result.country?.iso2Code); // null
-  print(result.country?.phoneCode); // null
-  print(result.country?.alternativePhoneCodes); // null
-  print(result.country?.mask); // null
-  print("\n");
+  print(result.country); // null
 ```
 
 ### Result
