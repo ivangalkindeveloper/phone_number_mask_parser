@@ -1,8 +1,11 @@
 # Phone number mask parser
-☎️ The package provides a simple parsing of phone numbers and various masking options.\
-The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
+
 
 <div align="center">
+  ☎️ The package provides a simple parsing of phone numbers and various masking options.
+  <br>
+  <br>
+
   <a href="">![Pub Likes](https://img.shields.io/pub/likes/phone_number_mask_parser?color=success)</a>
   <a href="">![Pub Version](https://img.shields.io/pub/v/phone_number_mask_parser?color=important)</a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
@@ -27,6 +30,16 @@ If you are sure that your phone number and alternative code are definitely used 
 ## Usage
 ### Main Class
 The package has the only main class to use - [PhoneNumberMaskParser](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/phone_number_mask_parser.dart#L10):
+The used masks must be formatted with "#" symbol, for example: "+## (##) ####".
+
+```dart
+const PhoneNumberMaskParser phoneNumberMaskParser = PhoneNumberMaskParser(
+    targetMask: "+## #### ######",
+    defaultMask: "+### (###) ### ####",
+    isPlus: false,
+    isEndless: true,
+);
+```
 
 | Data type | Name | Description | Default value |
 |-----------|------|-------------|---------------|
@@ -35,27 +48,42 @@ The package has the only main class to use - [PhoneNumberMaskParser](https://git
 | **bool** | **isPlus** | The flag responsible for the plus sign at the very beginning. | **true** |
 | **bool** | **isEndless** | the flag that doesn't cut the last part of the phone number if it exceeds the length of the mask. | **false** |
 
-```dart
-const PhoneNumberMaskParser maskParser = PhoneNumberMaskParser(
-    targetMask: "+## #### ######",
-    defaultMask: "+### (###) ### ####",
-    isPlus: false,
-    isEndless: true,
-);
-```
-
 ### Main Method
-The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/phone_number_mask_parser.dart#L35) does all the parsing work.
+The main method [apply](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/phone_number_mask_parser.dart#L35) does all the masking or parsing work.
+
+### Parsing
+If the target mask is not specified, then the method works in number parsing mode:
 
 ```dart
-  const PhoneNumberMaskParser maskParser = PhoneNumberMaskParser();
-  final PhoneNumberMaskParserResult result = maskParser.apply(phoneNumber: "4492330323912034");
+  const PhoneNumberMaskParser phoneNumberMaskParser = PhoneNumberMaskParser();
+  final PhoneNumberMaskParserResult result = phoneNumberMaskParser.apply(
+    phoneNumber: "4492330323912034",
+  );
   print(result.PhoneNumberMaskParsered); // +44 9233 032391
   print(result.country?.title); // United Kingdom
   print(result.country?.iso2Code); // GB
   print(result.country?.phoneCode); // 44
-  print(result.country?.alternativePhoneCodes); // [+447]
+  print(result.country?.alternativePhoneCodes); // []
   print(result.country?.mask); // +## #### ######
+```
+
+### Masking
+To apply your own mask, specify the target mask:
+
+```dart
+  const PhoneNumberMaskParser phoneNumberMaskParser = PhoneNumberMaskParser(
+    targetMask: "+## ## (####) ####",
+  );
+  final PhoneNumberMaskParserResult result = phoneNumberMaskParser.apply(
+    phoneNumber: "930293023049495565",
+  );
+  print(result.phoneNumberMasked); // +93 02 (9302) 3049
+  print(result.country?.title); // null
+  print(result.country?.iso2Code); // null
+  print(result.country?.phoneCode); // null
+  print(result.country?.alternativePhoneCodes); // null
+  print(result.country?.mask); // null
+  print("\n");
 ```
 
 ### Result
