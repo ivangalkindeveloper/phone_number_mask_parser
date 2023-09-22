@@ -81,24 +81,23 @@ class PhoneNumberMaskParser {
 
       // 5) Result
       return PhoneNumberMaskParserResult(
-        PhoneNumberMaskParsered:
-            this.isPlus ? result : result.replaceFirst("+", ""),
+        phoneNumberMasked: this.isPlus ? result : result.replaceFirst("+", ""),
         country: phoneNumberCountry,
       );
     } on PhoneNumberEmptyException {
       return const PhoneNumberMaskParserResult(
-        PhoneNumberMaskParsered: "",
+        phoneNumberMasked: "",
       );
     } on PhoneNumberTargetException {
       return PhoneNumberMaskParserResult(
-        PhoneNumberMaskParsered: this._applyMask(
+        phoneNumberMasked: this._applyMask(
           mask: this.targetMask!,
           phoneNumberSanitized: phoneNumberSanitized,
         ),
       );
     } on PhoneNumberProcessException {
       return PhoneNumberMaskParserResult(
-        PhoneNumberMaskParsered: this._applyMask(
+        phoneNumberMasked: this._applyMask(
           mask: this.defaultMask,
           phoneNumberSanitized: phoneNumberSanitized,
         ),
@@ -107,7 +106,7 @@ class PhoneNumberMaskParser {
       print("PhoneNumberMaskParser Exception: $error");
       print(stackTrace.toString());
       return PhoneNumberMaskParserResult(
-        PhoneNumberMaskParsered: phoneNumber,
+        phoneNumberMasked: phoneNumber,
       );
     }
   }
