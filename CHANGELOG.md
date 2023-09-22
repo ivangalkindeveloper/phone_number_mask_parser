@@ -1,3 +1,8 @@
+## 3.0.1
+* Fix hash data and script to hash structure;
+* Script for sort constant data.
+* New sorted constant data by codes.
+
 ## 3.0.0
 * New package name;
 * Removing useless cycles;

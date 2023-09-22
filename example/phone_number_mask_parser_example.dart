@@ -15,7 +15,7 @@ void main() {
   print(result0.country?.iso2Code);
   print(result0.country?.phoneCode);
   print(result0.country?.mask);
-  print("\n");
+  print("");
 
   const String phone1 = "168491012345120455";
   final PhoneNumberMaskParserResult result1 = phoneNumberMaskParser0.apply(
@@ -27,7 +27,7 @@ void main() {
   print(result1.country?.iso2Code);
   print(result1.country?.phoneCode);
   print(result1.country?.mask);
-  print("\n");
+  print("");
 
   const String phone2 = "898491012345120455";
   final PhoneNumberMaskParserResult result2 = phoneNumberMaskParser0.apply(
@@ -39,7 +39,7 @@ void main() {
   print(result2.country?.iso2Code);
   print(result2.country?.phoneCode);
   print(result2.country?.mask);
-  print("\n");
+  print("");
 
   const String phone3 = "798491012345120455";
   final PhoneNumberMaskParserResult result3 = phoneNumberMaskParser0.apply(
@@ -51,7 +51,7 @@ void main() {
   print(result3.country?.iso2Code);
   print(result3.country?.phoneCode);
   print(result3.country?.mask);
-  print("\n");
+  print("");
 
   const String phone4 = "778491012345120455";
   final PhoneNumberMaskParserResult result4 = phoneNumberMaskParser0.apply(
@@ -63,7 +63,7 @@ void main() {
   print(result4.country?.iso2Code);
   print(result4.country?.phoneCode);
   print(result4.country?.mask);
-  print("\n");
+  print("");
 
   const String phone5 = "930293023049495565";
   const PhoneNumberMaskParser phoneNumberMaskParser1 = PhoneNumberMaskParser(
@@ -78,7 +78,7 @@ void main() {
   print(result5.country?.iso2Code);
   print(result5.country?.phoneCode);
   print(result5.country?.mask);
-  print("\n");
+  print("");
 
   const String phone6 = "672235859394";
   final PhoneNumberMaskParserResult result6 = phoneNumberMaskParser1.apply(
@@ -90,7 +90,7 @@ void main() {
   print(result6.country?.iso2Code);
   print(result6.country?.phoneCode);
   print(result6.country?.mask);
-  print("\n");
+  print("");
 
   const String phone7 = "0492330323912034";
   const PhoneNumberMaskParser phoneNumberMaskParser2 = PhoneNumberMaskParser();
@@ -103,7 +103,7 @@ void main() {
   print(result7.country?.iso2Code);
   print(result7.country?.phoneCode);
   print(result7.country?.mask);
-  print("\n");
+  print("");
 
   const String phone8 = "0492330323912034";
   const PhoneNumberMaskParser phoneNumberMaskParser3 = PhoneNumberMaskParser(
@@ -118,7 +118,7 @@ void main() {
   print(result8.country?.iso2Code);
   print(result8.country?.phoneCode);
   print(result8.country?.mask);
-  print("\n");
+  print("");
 
   const String phone9 = "1492330323912034";
   const PhoneNumberMaskParser phoneNumberMaskParser4 = PhoneNumberMaskParser(
@@ -133,7 +133,7 @@ void main() {
   print(result9.country?.iso2Code);
   print(result9.country?.phoneCode);
   print(result9.country?.mask);
-  print("\n");
+  print("");
 
   const String phone10 = "3702033002300440403";
   const PhoneNumberMaskParser phoneNumberMaskParser5 = PhoneNumberMaskParser(
@@ -148,7 +148,7 @@ void main() {
   print(result10.country?.iso2Code);
   print(result10.country?.phoneCode);
   print(result10.country?.mask);
-  print("\n");
+  print("");
 
   stopwatch.stop();
   print(stopwatch.elapsedMicroseconds);

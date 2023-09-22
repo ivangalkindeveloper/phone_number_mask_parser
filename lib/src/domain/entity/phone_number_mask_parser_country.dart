@@ -13,8 +13,4 @@ class PhoneNumberMaskParserCountry {
   final String phoneCode;
   final List<String> alternativePhoneCodes;
   final String mask;
-
-  @override
-  toString() =>
-      'PhoneNumberMaskParserCountry(title: "$title", iso2Code: "$iso2Code", phoneCode: "$phoneCode", alternativePhoneCodes: ["${alternativePhoneCodes.join("\", \"")}"], mask: "$mask",)';
 }

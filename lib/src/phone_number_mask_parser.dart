@@ -1,7 +1,7 @@
-import 'package:phone_number_mask_parser/src/domain/exception/phone_number_process_exception.dart';
-import 'package:phone_number_mask_parser/src/domain/exception/phone_number_target_exception.dart';
-import 'package:phone_number_mask_parser/src/domain/exception/phone_number_empty_exception.dart';
-import 'package:phone_number_mask_parser/src/domain/entity/phone_number_mask_parser_hash.dart';
+import 'package:phone_number_mask_parser/src/core/exception/phone_number_process_exception.dart';
+import 'package:phone_number_mask_parser/src/core/exception/phone_number_target_exception.dart';
+import 'package:phone_number_mask_parser/src/core/exception/phone_number_empty_exception.dart';
+import 'package:phone_number_mask_parser/src/core/data/phone_number_mask_parser_hash.dart';
 import 'package:phone_number_mask_parser/phone_number_mask_parser.dart';
 import 'dart:math' as math;
 

@@ -3,7 +3,7 @@
 
 library phone_number_mask_parser;
 
-export 'src/domain/entity/phone_number_mask_parser_constant.dart';
+export 'src/core/data/phone_number_mask_parser_constant.dart';
 export 'src/domain/entity/phone_number_mask_parser_country.dart';
 export 'src/domain/entity/phone_number_mask_parser_result.dart';
 export 'src/phone_number_mask_parser.dart';
