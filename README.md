@@ -103,7 +103,7 @@ Overlaying a target or recognized country mask - O(N).\
 (N - length of the recognized phone number string)
 
 ## Additional Objects
-Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMaskParser.countries](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/domain/entity/phone_number_mask_parser_constant.dart#L7).
+Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMaskParser.countries](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/core/data/phone_number_mask_parser_constant.dart#L7).
 
 
 ## Additional Information
