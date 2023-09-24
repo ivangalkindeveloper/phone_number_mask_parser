@@ -114,7 +114,7 @@ void main() {
       phoneNumber: "1492330323912034",
     );
     expect(result0.phoneNumberMasked, "+1 (492) 330 3239 12034");
-    expect(result0.country?.title, "United States");
+    expect(result0.country?.title, "United States of America");
     expect(result0.country?.iso2Code, "US");
     expect(result0.country?.phoneCode, "+1");
     expect(result0.country?.mask, "+# (###) ### ####");

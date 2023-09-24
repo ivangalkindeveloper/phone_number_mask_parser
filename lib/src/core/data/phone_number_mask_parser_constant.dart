@@ -6,19 +6,19 @@ class PhoneNumberMaskParserConstant {
 
   static const List<PhoneNumberMaskParserCountry> countries = [
     PhoneNumberMaskParserCountry(
+      title: "United States of America",
+      iso2Code: "US",
+      phoneCode: "+1",
+      alternativePhoneCodes: [],
+      mask: "+# (###) ### ####",
+    ),
+    PhoneNumberMaskParserCountry(
       title: "Northern Mariana Islands",
       iso2Code: "MP",
       phoneCode: "+1",
       alternativePhoneCodes: [
         "+1 (670)",
       ],
-      mask: "+# (###) ### ####",
-    ),
-    PhoneNumberMaskParserCountry(
-      title: "United States of America",
-      iso2Code: "US",
-      phoneCode: "+1",
-      alternativePhoneCodes: [],
       mask: "+# (###) ### ####",
     ),
     PhoneNumberMaskParserCountry(

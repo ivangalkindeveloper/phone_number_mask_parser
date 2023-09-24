@@ -18,10 +18,11 @@ main() async {
       PhoneNumberMaskParserCountry country,
     ) {
       if (country.alternativePhoneCodes.isEmpty) {
-        final String code = country.phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
+        final String phoneCode =
+            country.phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
         writeCountry(
           sink,
-          code,
+          phoneCode,
           country,
         );
       } else {
@@ -29,10 +30,11 @@ main() async {
           (
             String phoneCode,
           ) {
-            final String code = phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
+            final String alternativePhoneCode =
+                phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
             writeCountry(
               sink,
-              code,
+              alternativePhoneCode,
               country,
             );
           },
