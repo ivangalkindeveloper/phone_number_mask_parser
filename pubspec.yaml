@@ -1,6 +1,6 @@
 name: phone_number_mask_parser
 description: ☎️ Dart package of simple parsing of phone numbers and various masking options.
-version: 3.0.2
+version: 3.0.3
 repository: https://github.com/ivangalkindeveloper/phone_number_mask_parser
 # homepage: https://www.example.com
 

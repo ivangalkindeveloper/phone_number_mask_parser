@@ -22,6 +22,11 @@ Some packages only provide the ability to either parse phone numbers, without th
 This package can use for self phone field formatters.\
 In the list of constant countries, such data is collected to ensure the maximum match for parsing phone numbers.
 
+## Efficiency
+Determining the country by the potential telephone code using hash table - O(1).\
+Overlaying a target or recognized country mask - O(N).\
+(N - length of the recognized phone number string)
+
 ## Phone code list
 The list of countries and phone codes used may not contain all combinations of alternative codes for recognition.\
 If you are sure that your phone number and alternative code are definitely used in the desired country, inform the package developer.
@@ -58,7 +63,7 @@ If the target mask is not specified, then the method works in number parsing mod
   final PhoneNumberMaskParserResult result = phoneNumberMaskParser.apply(
     phoneNumber: "4492330323912034",
   );
-  print(result.PhoneNumberMaskParsered); // +44 9233 032391
+  print(result.phoneNumberMasked); // +44 9233 032391
   print(result.country?.title); // United Kingdom
   print(result.country?.iso2Code); // GB
   print(result.country?.phoneCode); // 44
@@ -97,14 +102,8 @@ Country of parsered phone number [PhoneNumberMaskParserCountry](https://github.c
 | **List<String>** | **alternativePhoneCodes** | Alternative phone country code. |
 | **String** | **mask** | The mask of this number in its pure form. |
 
-### Efficiency
-Determining the country by the potential telephone code using hash table - O(1).\
-Overlaying a target or recognized country mask - O(N).\
-(N - length of the recognized phone number string)
-
 ## Additional Objects
-Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMaskParser.countries](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/core/data/phone_number_mask_parser_constant.dart#L7).
-
+Additionally, the package provides a constant list of country objects for its own use - [PhoneNumberMaskParserConstant.countries](https://github.com/ivangalkindeveloper/phone_number_mask_parser/blob/master/lib/src/core/data/phone_number_mask_parser_constant.dart#L7).
 
 ## Additional Information
 For more details see example project.\
