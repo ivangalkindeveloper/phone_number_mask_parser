@@ -1,3 +1,6 @@
+## 3.0.4
+* Fix directories.
+
 ## 3.0.3
 * Fix README.
 
