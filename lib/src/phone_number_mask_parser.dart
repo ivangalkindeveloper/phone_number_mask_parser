@@ -102,9 +102,7 @@ class PhoneNumberMaskParser {
           phoneNumberSanitized: phoneNumberSanitized,
         ),
       );
-    } catch (error, stackTrace) {
-      print("PhoneNumberMaskParser Exception: $error");
-      print(stackTrace.toString());
+    } catch (error) {
       return PhoneNumberMaskParserResult(
         phoneNumberMasked: phoneNumber,
       );

@@ -13,35 +13,28 @@ main() async {
   sink.writeln(
       "static const Map<String, PhoneNumberMaskParserCountry> countries = {");
 
-  PhoneNumberMaskParserConstant.countries.forEach(
-    (
-      PhoneNumberMaskParserCountry country,
-    ) {
-      if (country.alternativePhoneCodes.isEmpty) {
-        final String phoneCode =
-            country.phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
+  for (PhoneNumberMaskParserCountry country
+      in PhoneNumberMaskParserConstant.countries) {
+    if (country.alternativePhoneCodes.isEmpty) {
+      final String phoneCode =
+          country.phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
+      writeCountry(
+        sink,
+        phoneCode,
+        country,
+      );
+    } else {
+      for (String phoneCode in country.alternativePhoneCodes) {
+        final String alternativePhoneCode =
+            phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
         writeCountry(
           sink,
-          phoneCode,
+          alternativePhoneCode,
           country,
         );
-      } else {
-        country.alternativePhoneCodes.forEach(
-          (
-            String phoneCode,
-          ) {
-            final String alternativePhoneCode =
-                phoneCode.replaceAll(RegExp(r'[^0-9]'), "");
-            writeCountry(
-              sink,
-              alternativePhoneCode,
-              country,
-            );
-          },
-        );
       }
-    },
-  );
+    }
+  }
 
   sink.writeln("};");
   sink.writeln("}");

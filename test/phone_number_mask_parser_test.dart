@@ -91,7 +91,7 @@ void main() {
     expect(result0.country?.phoneCode, null);
     expect(result0.country?.mask, null);
 
-    final PhoneNumberMaskParser phoneNumberMaskParser1 = PhoneNumberMaskParser(
+    const PhoneNumberMaskParser phoneNumberMaskParser1 = PhoneNumberMaskParser(
       defaultMask: "+#### (####) ## ##",
     );
 
@@ -186,5 +186,4 @@ void main() {
   });
 
   stopwatch.stop();
-  print(stopwatch.elapsedMicroseconds);
 }

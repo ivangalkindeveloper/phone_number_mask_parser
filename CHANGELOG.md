@@ -1,3 +1,6 @@
+## 3.0.5
+* Linter fixes.
+
 ## 3.0.4
 * Fix directories.
 

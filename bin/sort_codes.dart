@@ -21,15 +21,12 @@ main() async {
   sink.writeln("");
   sink.writeln("static const List<PhoneNumberMaskParserCountry> countries = [");
 
-  countries.forEach(
-    (
-      PhoneNumberMaskParserCountry country,
-    ) =>
-        writeCountry(
+  for (PhoneNumberMaskParserCountry country in countries) {
+    writeCountry(
       sink,
       country,
-    ),
-  );
+    );
+  }
 
   sink.writeln("];");
   sink.writeln("}");
