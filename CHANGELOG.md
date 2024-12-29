@@ -1,3 +1,6 @@
+## 3.1.0
+* Add overriding mask by country iso code feature.
+
 ## 3.0.5
 * Linter fixes.
 

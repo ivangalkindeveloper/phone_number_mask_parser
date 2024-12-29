@@ -15,6 +15,7 @@ class PhoneNumberMaskParser {
   const PhoneNumberMaskParser({
     this.targetMask,
     this.defaultMask = "+### ### #### ####",
+    this.overrideIso2CodeMask = const {},
     this.isPlus = true,
     this.isEndless = false,
   });
@@ -24,6 +25,9 @@ class PhoneNumberMaskParser {
 
   /// The mask that will be used in case the phone number is not recognized.
   final String defaultMask;
+
+  /// Map for overriding mask for parsed country code
+  final Map<String, String> overrideIso2CodeMask;
 
   /// The flag responsible for the plus sign at the very beginning.
   final bool isPlus;
@@ -75,7 +79,8 @@ class PhoneNumberMaskParser {
 
       // 4) Mask
       final String result = this._applyMask(
-        mask: phoneNumberCountry.mask,
+        mask: overrideIso2CodeMask[phoneNumberCountry.iso2Code] ??
+            phoneNumberCountry.mask,
         phoneNumberSanitized: phoneNumberWithActualPhoneCodeSanitized,
       );
 

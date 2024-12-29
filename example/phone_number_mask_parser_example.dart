@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:phone_number_mask_parser/phone_number_mask_parser.dart';
 
 void main() {
